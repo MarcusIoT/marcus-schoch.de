@@ -28,6 +28,20 @@ p {
     max-width: 500px;
 }
 
+footer p{
+    max-width: none;
+}
+
+p span.copyright{
+    float: left; 
+    max-width: none;
+}
+
+p a.imprint{
+
+    float: right;
+}
+
 .w3-button:hover{
     color: green;
     background: none;
@@ -40,6 +54,11 @@ p {
 .w3-button svg{
     margin-top: 3px;
 }
+
+
+#firstEntry img { transition: all 1s ease-in-out; }
+
+#firstEntry img:hover { transform: scale(1.05); }
 
 
 @media only screen and (max-width: 600px) {
