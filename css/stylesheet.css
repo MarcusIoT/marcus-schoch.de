@@ -3,9 +3,23 @@
     background: #ffffff;
     max-width: 1200px;
     margin: auto;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Oxygen';
+    font-weight: 500;
+    letter-spacing: 5px;
     text-transform: uppercase;
-    font-size: 1.5em;
+    font-size: 1.3em;
+}
+
+.w3-bar a.w3-hide-small {
+    padding-top: 16px;
+    background: #ffffff;
+    max-width: 1200px;
+    margin: auto;
+    font-family: 'Oxygen';
+    font-weight: 400;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 0.5em;
 }
 
 header {
@@ -16,7 +30,7 @@ header {
 p, h1 {
     margin-left: 16px;
     margin-right: 16px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Oxygen';
 }
 
 h1 {
@@ -98,6 +112,18 @@ p a.imprint{
         margin-top: 50px;
     }
 
+    #secondEntry .w3-col p{
+    
+        margin-left: 16px;
+        margin-bottom: 30px;
+    }
+
+    #secondEntry .w3-col h2{
+    
+        margin-left: 16px;
+        margin-top: 50px;
+    }
+
 } 
 
 
@@ -151,3 +177,58 @@ p a.imprint{
 .closebtn svg:hover path {
     fill: green;
 }
+
+.back-to-top {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    /* image replacement properties */
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    background: url(../img/back-to-top-arrow.svg) no-repeat center 50%;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity .3s 0s, visibility 0s .3s, background-color .3s 0s;
+    transition: opacity .3s 0s, visibility 0s .3s, background-color .3s 0s, transform 1s ease-in-out;
+  }
+  
+  .back-to-top.back-to-top--show,
+  .back-to-top.back-to-top--fade-out,
+  .back-to-top:hover {
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s, background-color .3s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s, background-color .3s 0s;
+  }
+  
+  .back-to-top.back-to-top--show {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .back-to-top.back-to-top--fade-out {
+    opacity: .5;
+  }
+  
+  .back-to-top:hover {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .back-to-top {
+      right: 20px;
+      bottom: 20px;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    .back-to-top {
+      height: 60px;
+      width: 60px;
+      right: 30px;
+      bottom: 30px;
+    }
+  }
