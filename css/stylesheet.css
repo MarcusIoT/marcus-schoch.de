@@ -192,15 +192,15 @@ p a.imprint{
     background: url(../img/back-to-top-arrow.svg) no-repeat center 50%;
     visibility: hidden;
     opacity: 0;
-    -webkit-transition: opacity .3s 0s, visibility 0s .3s, background-color .3s 0s;
+    -webkit-transition: opacity .3s 0s, visibility 0s .3s, background-color .3s 0s, transform 1s ease-in-out;
     transition: opacity .3s 0s, visibility 0s .3s, background-color .3s 0s, transform 1s ease-in-out;
   }
   
   .back-to-top.back-to-top--show,
   .back-to-top.back-to-top--fade-out,
   .back-to-top:hover {
-    -webkit-transition: opacity .3s 0s, visibility 0s 0s, background-color .3s 0s;
-    transition: opacity .3s 0s, visibility 0s 0s, background-color .3s 0s;
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s, background-color .3s 0s, transform 1s ease-in-out;
+    transition: opacity .3s 0s, visibility 0s 0s, background-color .3s 0s, transform 1s ease-in-out;
   }
   
   .back-to-top.back-to-top--show {
