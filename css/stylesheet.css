@@ -1,11 +1,19 @@
+html {
+    overflow: -moz-scrollbars-vertical; 
+    overflow-y: scroll;
+    font-size: 18px;
+}
+
+
 .w3-bar {
     padding-top: 16px;
     background: #ffffff;
     max-width: 1200px;
-    margin: auto;
+    margin-right: auto;
+    margin-left: auto;
     font-family: 'Oxygen';
     font-weight: 500;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     text-transform: uppercase;
     font-size: 1.3em;
 }
@@ -17,14 +25,15 @@
     margin: auto;
     font-family: 'Oxygen';
     font-weight: 400;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    font-size: 0.5em;
+    font-size: 0.65em;
 }
 
 header {
     max-width: 1200px;
     margin: auto;
+    margin-bottom: 100px;
 }
 
 p, h1 {
@@ -35,7 +44,14 @@ p, h1 {
 
 h1 {
     font-weight: bold;
-    margin-top: 70px;
+    margin-top: 120px;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 p {
@@ -74,36 +90,51 @@ p a.imprint{
 
 #firstEntry img:hover { transform: scale(1.05); }
 
+#secondEntry img { transition: all 1s ease-in-out; }
 
-@media only screen and (max-width: 600px) {
+#secondEntry img:hover { transform: scale(1.05); }
 
-    #firstEntry .w3-col p{
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.col-sm-5, .col-sm-7, -col-md-6 {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    #firstEntry p{
     
-        margin-left: 6vw;
+        margin-left: 16px;
         margin-right: 16px;
         margin-bottom: 30px;
     }
 
-    #firstEntry .w3-col h2{
+    #firstEntry h2{
     
-        margin-left: 6vw;
+        margin-left: 16px;
         margin-right: 16px;
         margin-top: 50px;
     }
 
 } 
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
 
-    #firstEntry .w3-col p{
+    #firstEntry p{
     
-        margin-left: 6vw;
+        margin-left: 8vw;
         margin-right: 16px;
     }
 
-    #firstEntry .w3-col h2{
+    #firstEntry h2{
     
-        margin-left: 6vw;
+        margin-left: 8vw;
         margin-right: 16px;
         margin-top: 10vw;
     }
@@ -112,13 +143,13 @@ p a.imprint{
         margin-top: 50px;
     }
 
-    #secondEntry .w3-col p{
+    #secondEntry p{
     
         margin-left: 16px;
         margin-bottom: 30px;
     }
 
-    #secondEntry .w3-col h2{
+    #secondEntry h2{
     
         margin-left: 16px;
         margin-top: 50px;
