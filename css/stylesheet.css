@@ -116,13 +116,22 @@ footer p {
 }
 
 /*--------------- Project Section ---------------*/
+.projectSection {
+  display: block;
+}
 
-.projectSection img {
+#one {
   transition: all 1s ease-in-out;
 }
 
-.projectSection img:hover {
-  transform: scale(1.05);
+.projectSection svg {
+  position: relative;
+}
+
+#two {
+  position: absolute;
+  top: 0;
+  opacity: 0;
 }
 
 .row {
@@ -298,22 +307,24 @@ footer p {
 }
 
 .back-to-top:hover {
-  transform: scale(1.5);
+  transform: scale(1.3);
   opacity: 1;
+}
+
+@media only screen and (max-width: 768px) {
+  .back-to-top {
+    right: 20px;
+    bottom: 20px;
+    background-size: 50%;
+  }
 }
 
 @media only screen and (min-width: 768px) {
   .back-to-top {
-    right: 20px;
-    bottom: 20px;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .back-to-top {
     height: 60px;
     width: 60px;
-    right: 30px;
-    bottom: 30px;
+    background-size: 60%;
+    right: 40px;
+    bottom: 40px;
   }
 }
