@@ -345,3 +345,48 @@ footer p {
   margin-top:120px;
 
 }
+
+
+/*--------------- Imprint ---------------*/
+
+@media only screen and (min-width: 768px) {
+
+  .imprintBlock p{
+    max-width: none;
+  }
+}
+.imprintBlock a{
+  word-wrap: break-word;
+}
+
+.imprintBlock {
+  max-width: 66.66rem;
+  margin: auto;
+  margin-top: 6.667rem;
+}
+
+.imprintBlock h1, h2, h3{
+  margin-left: 0.889rem;
+  margin-right: 0.889rem;
+}
+
+.imprintBlock h2{
+  font-size: 1.667rem;
+  margin-top: 2.222rem;
+  margin-bottom: 1.111rem;
+}
+
+.imprintBlock h3{
+  font-size: 1.333rem;
+  margin-top: 1.667rem;
+  margin-bottom: 0.556rem;
+}
+
+#datenschutzCR{
+  display: inline-block;
+  margin-left: 0.889rem;
+  margin-right: 0.889rem;
+  font-size: 0.9rem;
+  margin-top: 0.889rem;
+}
+
