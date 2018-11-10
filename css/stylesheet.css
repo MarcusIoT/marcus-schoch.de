@@ -2,7 +2,7 @@ html {
   overflow: -moz-scrollbars-vertical;
   overflow-y: scroll;
   font-size: 18px;
-  font-family: "Oxygen";
+  font-family: 'Montserrat';
 }
 
 @media only screen and (min-width: 2560px) {
@@ -16,13 +16,17 @@ html {
   }
 }
 
+body {
+  font-family: 'Montserrat';
+}
+
 /*--------------- NavBar ---------------*/
 
 .w3-bar {
   padding-top: 0.89rem;
   max-width: 66.66rem;
   margin: auto;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0.222rem;
   text-transform: uppercase;
   font-size: 1.1rem;
@@ -96,6 +100,8 @@ footer p {
   max-width: 66.667rem;
   margin: auto;
   margin-top: 5.556rem;
+  margin-bottom: 1.111rem;
+  font-size: 0.75rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -115,13 +121,14 @@ footer p {
 @media only screen and (min-width: 768px) {
   p span.copyright {
     float: left;
-    max-width: none;
-    margin-left: 16px;
+    margin-left: 0.889rem;
+    margin-bottom: 0.444rem;
   }
 
   p a.imprint {
     float: right;
-    margin-right: 16px;
+    margin-right: 0.889rem;
+    margin-bottom: 0.444rem;
   }
 }
 
@@ -274,6 +281,11 @@ footer p {
   fill: green;
 }
 
+#myNav {
+  opacity: 0;
+  transition: 4s ease-in-out;
+}
+
 /*--------------- Back to Top ---------------*/
 
 .back-to-top {
@@ -320,7 +332,7 @@ footer p {
     height: 40px;
     width: 40px;
     right: 10px;
-    bottom: 16px;
+    bottom: 10px;
     background-size: 50%;
   }
 }
@@ -335,14 +347,15 @@ footer p {
   }
 }
 
+/*--------------- About ---------------*/
 
 .about {
-  max-width: 1200px;
+  max-width: 66.66rem;
   margin:auto;
 }
 
 .about img{
-  margin-top:120px;
+  margin-top: 6.667rem;
 
 }
 
@@ -355,6 +368,8 @@ footer p {
     max-width: none;
   }
 }
+
+
 .imprintBlock a{
   word-wrap: break-word;
 }

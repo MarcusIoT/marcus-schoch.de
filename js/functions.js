@@ -1,11 +1,11 @@
-(function() {
+(function () {
   var backTop = document.getElementsByClassName("script-back-to-top")[0],
     offset = 300,
     offsetOpacity = 1200,
     scrollDuration = 700,
     scrolling = false;
   if (backTop) {
-    window.addEventListener("scroll", function(event) {
+    window.addEventListener("scroll", function (event) {
       if (!scrolling) {
         scrolling = true;
         !window.requestAnimationFrame
@@ -14,7 +14,7 @@
       }
     });
 
-    backTop.addEventListener("click", function(event) {
+    backTop.addEventListener("click", function (event) {
       event.preventDefault();
       !window.requestAnimationFrame
         ? window.scrollTo(0, 0)
@@ -36,7 +36,7 @@
     var start = window.scrollY || document.documentElement.scrollTop,
       currentTime = null;
 
-    var animateScroll = function(timestamp) {
+    var animateScroll = function (timestamp) {
       if (!currentTime) currentTime = timestamp;
       var progress = timestamp - currentTime;
       var val = Math.max(
@@ -52,7 +52,7 @@
     window.requestAnimationFrame(animateScroll);
   }
 
-  Math.easeInOutQuad = function(t, b, c, d) {
+  Math.easeInOutQuad = function (t, b, c, d) {
     t /= d / 2;
     if (t < 1) return (c / 2) * t * t + b;
     t--;
@@ -86,13 +86,12 @@
 
 function openNav() {
   document.getElementById("myNav").style.display = "block";
-  document.getElementById("myNav").style.transition = "opacity 1s"; // working on
   document.getElementById("myNav").style.opacity = "0.9";
 }
 
 function closeNav() {
   document.getElementById("myNav").style.display = "none";
-  document.getElementById("myNav").style.opacity = "0.1";
+  document.getElementById("myNav").style.opacity = "0";
 }
 
 function chSize(bla, blub) {
