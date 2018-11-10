@@ -132,6 +132,11 @@ footer p {
   right: 0px;
 }
 
+.left img {
+  position: absolute;
+  left: 0px;
+}
+
 #one,
 #three {
   transition: all 1s ease-in-out;
@@ -142,9 +147,17 @@ footer p {
   top: 0;
   right: 0;
   float: right;
-  opacity: 1;
-  max-width: 1200px;
-  max-height: 1080px;
+  opacity: 0;
+  max-width: 1920px;
+}
+
+#four {
+  position: relative;
+  top: 0;
+  left: 0;
+  float: left;
+  opacity: 0;
+  max-width: 1920px;
 }
 
 .row {
