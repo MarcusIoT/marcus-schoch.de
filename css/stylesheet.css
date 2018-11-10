@@ -5,31 +5,36 @@ html {
   font-family: "Oxygen";
 }
 
+@media only screen and (min-width: 2560px) {
+  html {
+    font-size: 24px;
+  }
+}
+@media only screen and (min-width: 3840px) {
+  html {
+    font-size: 36px;
+  }
+}
+
 /*--------------- NavBar ---------------*/
 
 .w3-bar {
-  padding-top: 16px;
-  background: #ffffff;
-  max-width: 1200px;
-  margin-right: auto;
-  margin-left: auto;
-  font-family: "Oxygen";
+  padding-top: 0.89rem;
+  max-width: 66.66rem;
+  margin: auto;
   font-weight: 500;
-  letter-spacing: 4px;
+  letter-spacing: 0.222rem;
   text-transform: uppercase;
-  font-size: 1.3em;
+  font-size: 1.1rem;
 }
 
 .w3-bar a.w3-hide-small {
-  padding-top: 16px;
-  background: #ffffff;
-  max-width: 1200px;
+  padding-top: 0.89rem;
   margin: auto;
-  font-family: "Oxygen";
   font-weight: 400;
-  letter-spacing: 4px;
+  letter-spacing: 0.222rem;
   text-transform: uppercase;
-  font-size: 0.65em;
+  font-size: 0.7rem;
 }
 
 a:hover {
@@ -61,33 +66,36 @@ p {
 }
 
 header {
-  max-width: 1200px;
+  max-width: 66.66rem;
   margin: auto;
-  margin-bottom: 100px;
+  margin-bottom: 5.556rem;
 }
 
 p,
 h1 {
-  margin-left: 16px;
-  margin-right: 16px;
+  margin-left: 0.889rem;
+  margin-right: 0.889rem;
 }
 
 h1 {
   font-weight: bold;
-  margin-top: 120px;
-  margin-bottom: 30px;
+  margin-top: 6.667rem;
+  margin-bottom: 1.667rem;
   font-size: 1.5rem;
-  letter-spacing: 1px;
+  letter-spacing: 0.056rem;
 }
 
 p {
-  max-width: 500px;
+  max-width: 27.778rem;
+  font-size: 0.9rem;
 }
 
 /*--------------- Footer Imprint ---------------*/
 
 footer p {
-  max-width: none;
+  max-width: 66.667rem;
+  margin: auto;
+  margin-top: 5.556rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -108,37 +116,42 @@ footer p {
   p span.copyright {
     float: left;
     max-width: none;
+    margin-left: 16px;
   }
 
   p a.imprint {
     float: right;
+    margin-right: 16px;
   }
 }
 
 /*--------------- Project Section ---------------*/
-.projectSection {
-  display: block;
+
+.right img {
+  position: absolute;
+  right: 0px;
 }
 
-#one {
+#one,
+#three {
   transition: all 1s ease-in-out;
 }
 
-.projectSection svg {
-  position: relative;
-}
-
 #two {
-  position: absolute;
+  position: relative;
   top: 0;
-  opacity: 0;
+  right: 0;
+  float: right;
+  opacity: 1;
+  max-width: 1200px;
+  max-height: 1080px;
 }
 
 .row {
   margin-right: 0px;
   margin-left: 0px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 1.667rem;
+  margin-bottom: 1.667rem;
   vertical-align: middle;
 }
 
@@ -178,37 +191,19 @@ footer p {
     align-items: center;
   }
 
-  #firstEntry p {
+  .projectSection p {
     margin-left: 8vw;
-    margin-right: 16px;
-    line-height: 2em;
+    margin-right: 0.889rem;
+    line-height: 1.8rem;
   }
 
-  #firstEntry h2 {
+  .projectSection h2 {
     margin-left: 8vw;
-    margin-right: 16px;
-    margin-bottom: 30px;
+    margin-right: 0.889rem;
+    margin-bottom: 1.667rem;
     font-size: 2rem;
     font-weight: bold;
-    letter-spacing: 5px;
-  }
-
-  #firstEntry {
-    margin-top: 50px;
-  }
-
-  #secondEntry p {
-    margin-left: 8vw;
-    line-height: 2em;
-  }
-
-  #secondEntry h2 {
-    margin-left: 8vw;
-    margin-top: 50px;
-    margin-bottom: 30px;
-    font-size: 2rem;
-    font-weight: bold;
-    letter-spacing: 5px;
+    letter-spacing: 0.278rem;
   }
 }
 
@@ -231,7 +226,7 @@ footer p {
   position: relative;
   width: 100%;
   text-align: right;
-  margin-top: 150px;
+  margin-top: 90px;
 }
 
 .overlay-content a {
@@ -270,11 +265,7 @@ footer p {
 
 .back-to-top {
   display: inline-block;
-  height: 40px;
-  width: 40px;
   position: fixed;
-  bottom: 40px;
-  right: 10px;
   /* image replacement properties */
   overflow: hidden;
   text-indent: 100%;
@@ -313,18 +304,31 @@ footer p {
 
 @media only screen and (max-width: 768px) {
   .back-to-top {
-    right: 20px;
-    bottom: 20px;
+    height: 40px;
+    width: 40px;
+    right: 10px;
+    bottom: 16px;
     background-size: 50%;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .back-to-top {
-    height: 60px;
-    width: 60px;
+    height: 3.33rem;
+    width: 3.33rem;
     background-size: 60%;
-    right: 40px;
-    bottom: 40px;
+    right: 2.22rem;
+    bottom: 2.22rem;
   }
+}
+
+
+.about {
+  max-width: 1200px;
+  margin:auto;
+}
+
+.about img{
+  margin-top:120px;
+
 }

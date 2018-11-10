@@ -95,10 +95,11 @@ function closeNav() {
   document.getElementById("myNav").style.opacity = "0.1";
 }
 
-function chSize(bla) {
+function chSize(bla, blub) {
   if (bla > 0) {
-    document.getElementById("one").style.transform = "scale(1.05)";
+    document.getElementById(blub).style.transform = "scale(1.05)";
+    console.log("jap");
   } else {
-    document.getElementById("one").style.transform = "scale(1)";
+    document.getElementById(blub).style.transform = "scale(1)";
   }
 }
