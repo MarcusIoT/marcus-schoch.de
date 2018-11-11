@@ -130,6 +130,10 @@ footer {
   
 }
 
+.imprint a {
+  color: black;
+}
+
 @media only screen and (max-width: 768px) {
   .copyright {
     display: block;
@@ -250,8 +254,8 @@ footer {
     margin-left: 8vw;
     margin-right: 0.889rem;
     margin-bottom: 1.667rem;
-    font-size: 2.222rem;
-    font-weight: 700;
+    font-size: 2.5rem;
+    font-weight: 600;
     letter-spacing: 0.278rem;
   }
 }
@@ -438,3 +442,16 @@ footer {
   margin-top: 0.889rem;
 }
 
+/*--------------- Project Sites ---------------*/
+
+.projectHeader {
+  position: absolute;
+  top: 3.5rem;
+  height: 19.444444444444443rem;
+  width: 100vw;
+}
+
+.projectHeader rect {
+  height: 19.444444444444443rem;
+  width: 100vw;
+}
