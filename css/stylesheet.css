@@ -3,6 +3,7 @@ html {
   overflow-y: scroll;
   font-size: 18px;
   font-family: 'Montserrat';
+  height: 100%;
 }
 
 @media only screen and (min-width: 2560px) {
@@ -18,6 +19,13 @@ html {
 
 body {
   font-family: 'Montserrat';
+  height: 100%;
+}
+
+#pageContainer {
+  display: block;
+  position: relative;
+  min-height: 100vh;
 }
 
 /*--------------- NavBar ---------------*/
@@ -96,22 +104,35 @@ p {
 
 /*--------------- Footer Imprint ---------------*/
 
-footer p {
+#bottom {
+  padding-top: 4.444rem;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-top: 2.222rem;
+}
+
+footer {
+  position: relative;
   max-width: 66.667rem;
   margin: auto;
   margin-top: 5.556rem;
   margin-bottom: 1.111rem;
   font-size: 0.75rem;
+  
 }
 
 @media only screen and (max-width: 768px) {
-  p span.copyright {
+  .copyright {
     display: block;
     margin: auto;
     text-align: center;
   }
 
-  p a.imprint {
+  .imprint {
     display: block;
     margin: auto;
     text-align: center;
@@ -119,13 +140,13 @@ footer p {
 }
 
 @media only screen and (min-width: 768px) {
-  p span.copyright {
+  .copyright {
     float: left;
     margin-left: 0.889rem;
     margin-bottom: 0.444rem;
   }
 
-  p a.imprint {
+  .imprint {
     float: right;
     margin-right: 0.889rem;
     margin-bottom: 0.444rem;
@@ -175,8 +196,11 @@ footer p {
   vertical-align: middle;
 }
 
+.col-sm-4,
 .col-sm-5,
+.col-sm-6,
 .col-sm-7,
+.col-sm-8,
 -col-md-6 {
   padding-right: 0px;
   padding-left: 0px;
@@ -356,7 +380,8 @@ footer p {
 
 .about img{
   margin-top: 6.667rem;
-
+  padding-left: 0.887rem;
+  padding-right: 0.887rem;
 }
 
 
@@ -369,6 +394,9 @@ footer p {
   }
 }
 
+.imprintBlock {
+  word-wrap: normal;
+}
 
 .imprintBlock a{
   word-wrap: break-word;
