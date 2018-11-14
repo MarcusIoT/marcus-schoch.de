@@ -149,12 +149,14 @@ footer {
 
 @media only screen and (min-width: 768px) {
   .copyright {
+    display: block;
     float: left;
     margin-left: 0.889rem;
     margin-bottom: 0.444rem;
   }
 
   .imprint {
+    display: block;
     float: right;
     margin-right: 0.889rem;
     margin-bottom: 0.444rem;
@@ -442,19 +444,6 @@ footer {
 
 /*--------------- Project Sites ---------------*/
 
-/*.projectHeader {
-  position: absolute;
-  top: 3.75rem;
-  height: 22.222rem;
-  width: 100vw;
-  z-index: -1;
-}
-
-.projectHeader rect {
-  height: 22.222rem;
-  width: 100vw;
-}*/
-
 .projectHeaderContent {
   max-width: 66.66rem;
   margin: auto;
@@ -484,7 +473,7 @@ footer {
   max-width: 60rem;
   margin: auto;
   margin-top: 1.667rem;
-  margin-bottom: 1.667rem;
+  margin-bottom: 3rem;
 }
 
 .names h5{
@@ -499,10 +488,29 @@ footer {
 }
 
 @media only screen and (min-width: 768px) {
-
   .shortDescription p{
     margin-right: 2rem;
   }
 
 }
 
+.contentProjects{
+  max-width: 66.66rem;
+  margin: auto;
+  margin-top: 1.667rem;
+  margin-bottom: 1.667rem;
+}
+
+.parallax { 
+  /* The image used */
+  background-image: url("../img/Aufstellung.jpg");
+
+  /* Set a specific height */
+  height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
