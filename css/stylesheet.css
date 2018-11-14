@@ -124,7 +124,6 @@ footer {
   position: relative;
   max-width: 66.667rem;
   margin: auto;
-  margin-top: 5.556rem;
   margin-bottom: 1.111rem;
   font-size: 0.75rem;
   
@@ -200,8 +199,6 @@ footer {
 .row {
   margin-right: 0px;
   margin-left: 0px;
-  margin-top: 1.667rem;
-  margin-bottom: 1.667rem;
   vertical-align: middle;
 }
 
@@ -210,6 +207,7 @@ footer {
 .col-sm-6,
 .col-sm-7,
 .col-sm-8,
+.col-sm-12,
 -col-md-6 {
   padding-right: 0px;
   padding-left: 0px;
@@ -444,14 +442,67 @@ footer {
 
 /*--------------- Project Sites ---------------*/
 
-.projectHeader {
+/*.projectHeader {
   position: absolute;
-  top: 3.5rem;
+  top: 3.75rem;
   height: 22.222rem;
   width: 100vw;
+  z-index: -1;
 }
 
 .projectHeader rect {
   height: 22.222rem;
   width: 100vw;
+}*/
+
+.projectHeaderContent {
+  max-width: 66.66rem;
+  margin: auto;
 }
+
+.projectHeaderContent p, .projectHeaderContent h1 {
+  color: white;
+  margin-left: 3rem;
+}
+
+.projectHeaderContent h1 {
+  font-size: 2rem;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  .projectHeaderContent {
+    padding-top: 1.5rem;
+  }
+
+}
+
+
+
+.shortDescription{
+  max-width: 60rem;
+  margin: auto;
+  margin-top: 1.667rem;
+  margin-bottom: 1.667rem;
+}
+
+.names h5{
+  margin-left: 0.887rem;
+  margin-right: 0.887rem;
+  font-size: 0.7777777777777778rem;
+  font-weight: 500;
+}
+
+.names p{
+  font-size: 0.7777777777777778rem;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .shortDescription p{
+    margin-right: 2rem;
+  }
+
+}
+
