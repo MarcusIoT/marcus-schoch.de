@@ -1,15 +1,15 @@
 (function () {
-  
+
   var downProject = document.getElementsByClassName("script-down-to-project")[0],
     offset = 300,
-    offsetOpacity = 1200,  
+    offsetOpacity = 1200,
     scrollDuration = 700,
     scrolling = false;
   if (downProject) {
     window.addEventListener("scroll", function (event) {
       if (!scrolling) {
         scrolling = true;
-        if(window.requestAnimationFrame == false) {
+        if (window.requestAnimationFrame == false) {
           setTimeout(checkBackToTop, 250)
         }
         else {
@@ -21,7 +21,7 @@
     downProject.addEventListener("click", function (event) {
       event.preventDefault();
       var destination = getDestinationDown();
-      if(window.requestAnimationFrame == false) {
+      if (window.requestAnimationFrame == false) {
         window.scrollTo(0, destination)
       }
       else {
@@ -29,64 +29,61 @@
       }
     });
   }
-  
+
   var backTop = document.getElementsByClassName("script-back-to-top")[0],
     offset = 300,
     offsetOpacity = 1200,
     scrollDuration = 700,
     scrolling = false;
-    if (backTop) {
-      window.addEventListener("scroll", function (event) {
-        if (!scrolling) {
-          scrolling = true;
-          if(window.requestAnimationFrame == false) {
-            setTimeout(checkBackToTop, 250)
-          }
-          else {
-            window.requestAnimationFrame(checkBackToTop);
-          }
-        }
-      });
-
-      backTop.addEventListener("click", function (event) {
-        event.preventDefault();
-        if(window.requestAnimationFrame == false) {
-          window.scrollTo(0, 0)
+  if (backTop) {
+    window.addEventListener("scroll", function (event) {
+      if (!scrolling) {
+        scrolling = true;
+        if (window.requestAnimationFrame == false) {
+          setTimeout(checkBackToTop, 250)
         }
         else {
-          scrollTo(scrollDuration, 0);
+          window.requestAnimationFrame(checkBackToTop);
         }
+      }
     });
-  } 
 
-  function getDestinationDown(){
+    backTop.addEventListener("click", function (event) {
+      event.preventDefault();
+      if (window.requestAnimationFrame == false) {
+        window.scrollTo(0, 0)
+      }
+      else {
+        scrollTo(scrollDuration, 0);
+      }
+    });
+  }
+
+  function getDestinationDown() {
     var windowTop = window.scrollY || document.documentElement.scrollTop;
     var destination = 0;
-    if(windowTop < 450) {destination = 450}
-    else if(windowTop < 1400 && windowTop >= 450) {destination = 1400}
-    else {destination = 2000}
+    if (windowTop < 450) { destination = 451 }
+    else if (windowTop < 1400 && windowTop >= 450) { destination = 1402 }
+    else { destination = 2000 }
     return destination;
   }
 
-  function getDestinationUp(){
+  function getDestinationUp() {
     var windowTop = window.scrollY || document.documentElement.scrollTop;
     var destination = 0;
-    if(windowTop > 450 && windowTop < 1400) {destination = 450}
-    else if(windowTop > 1400) {destination = 1400}
-    else {destination = 0}
+    if (windowTop > 450 && windowTop < 1400) { destination = 450 }
+    else if (windowTop > 1400) { destination = 1400 }
+    else { destination = 0 }
     return destination;
   }
 
   function checkBackToTop() {
     var windowTop = window.scrollY || document.documentElement.scrollTop;
-    if(windowTop > offset) {
-      addClass(backTop, "back-to-top--show");
-      addClass(downProject, "down-to-project--show")
-    }
-    else {
-      removeClass(backTop, "back-to-top--show", "back-to-top--fade-out");
-      removeClass(downProject, "down-to-project--show", "down-to-project--fade-out");
-    }
+    console.log(windowTop);
+    if (windowTop > offset) { addClass(backTop, "back-to-top--show"); }
+    else if (windowTop < 1400) { addClass(downProject, "down-to-project--show") }
+    else if (windowTop < offset) { removeClass(backTop, "back-to-top--show", "back-to-top--fade-out"); }
+    else if (windowTop > 1400) { removeClass(downProject, "down-to-project--show", "down-to-project--fade-out"); }
     windowTop > offsetOpacity && addClass(backTop, "back-to-top--fade-out"), addClass(downProject, "down-to-project--fade-out");
     scrolling = false;
   }
@@ -110,10 +107,10 @@
 
   function easeInOutQuad(t, b, d, e) {
     c = e - b;
-    t /= d/2;
-    if (t < 1) return c/2*t*t + b;
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t + b;
     t--;
-    return -c/2 * (t*(t-2) - 1) + b;
+    return -c / 2 * (t * (t - 2) - 1) + b;
   };
 
   function hasClass(el, className) {
