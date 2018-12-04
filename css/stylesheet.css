@@ -259,7 +259,6 @@ footer {
   #secondEntry p {
     margin-left: 16px;
     margin-right: 16px;
-    margin-bottom: 50px;
     line-height: 2em;
   }
 
@@ -267,9 +266,17 @@ footer {
   #secondEntry h1 {
     margin-left: 16px;
     margin-right: 16px;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
     letter-spacing: 4px;
+  }
+
+  .projectSection img {
+    margin-top: 2rem;
+  }
+
+  .parent {
+    margin-bottom: 7rem;
   }
 }
 
@@ -292,6 +299,10 @@ footer {
     font-size: 3rem;
     font-weight: 600;
     letter-spacing: 0rem;
+  }
+
+  #firstEntry {
+    margin-bottom: 5.55rem;
   }
 }
 
@@ -364,6 +375,7 @@ footer {
   text-indent: 100%;
   white-space: nowrap;
   background: url(../img/back-to-top-arrow.svg) no-repeat center 50%;
+  background-color: rgba(255,255,255,0.6);
   visibility: hidden;
   opacity: 0;
   -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s,
@@ -372,13 +384,8 @@ footer {
     transform 1s ease-in-out;
 }
 
-.back-to-top.back-to-top--show,
-.back-to-top.back-to-top--fade-out,
 .back-to-top:hover {
-  -webkit-transition: opacity 0.3s 0s, visibility 0s 0s,
-    background-color 0.3s 0s, transform 1s ease-in-out;
-  transition: opacity 0.3s 0s, visibility 0s 0s, background-color 0.3s 0s,
-    transform 1s ease-in-out;
+  transform: scale(1.1);
 }
 
 .back-to-top.back-to-top--show {
@@ -386,90 +393,22 @@ footer {
   opacity: 1;
 }
 
-.back-to-top.back-to-top--fade-out {
-  opacity: 0.5;
-}
-
-.back-to-top:hover {
-  transform: scale(1.3);
-  opacity: 1;
-}
 
 @media only screen and (max-width: 768px) {
   .back-to-top {
     height: 40px;
     width: 40px;
-    right: 10px;
-    bottom: 10px;
-    background-size: 50%;
+    right: 16px;
+    bottom: 16px;
+    background-size: 100%;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .back-to-top {
-    height: 3.33rem;
-    width: 3.33rem;
-    background-size: 60%;
-    right: 2.22rem;
-    bottom: 6rem;
-  }
-}
-
-
-.down-to-project {
-  display: inline-block;
-  position: fixed;
-  /* image replacement properties */
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
-  background: url(../img/down-project-arrow.svg) no-repeat center 50%;
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s,
-    background-color 0.3s 0s, transform 1s ease-in-out;
-  transition: opacity 0.3s 0s, visibility 0s 0.3s, background-color 0.3s 0s,
-    transform 1s ease-in-out;
-}
-
-.down-to-project:hover {
-  transform: scale(1.3);
-  opacity: 1;
-}
-
-.down-to-project.down-to-project--show,
-.down-to-project.down-to-project--fade-out,
-.down-to-project:hover {
-  -webkit-transition: opacity 0.3s 0s, visibility 0s 0s,
-    background-color 0.3s 0s, transform 1s ease-in-out;
-  transition: opacity 0.3s 0s, visibility 0s 0s, background-color 0.3s 0s,
-    transform 1s ease-in-out;
-}
-
-.down-to-project.down-to-project--show {
-  visibility: visible;
-  opacity: 1;
-}
-
-.down-to-project.down-to-project--fade-out {
-  opacity: 0.5;
-}
-
-@media only screen and (max-width: 768px) {
-  .down-to-project {
-    height: 40px;
-    width: 40px;
-    right: 10px;
-    bottom: 60px;
-    background-size: 50%;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .down-to-project {
-    height: 3.33rem;
-    width: 3.33rem;
-    background-size: 60%;
+    height: 2.5rem;
+    width: 2.5rem;
+    background-size: 100%;
     right: 2.22rem;
     bottom: 2.22rem;
   }
@@ -521,7 +460,17 @@ footer {
   opacity: 1;
 }
 
+@media only screen and (max-width: 768px) {
+  .about p {
+    margin-top: 2rem;
+  }
+}
 
+@media only screen and (min-width: 768px) {
+  .about h2 {
+    display: none;
+  }
+}
 
 
 /*--------------- Imprint ---------------*/

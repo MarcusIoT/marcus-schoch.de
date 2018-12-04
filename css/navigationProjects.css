@@ -1,0 +1,52 @@
+ 
+  @media only screen and (min-width: 768px) {
+    .back-to-top {
+      bottom: 6rem !important;
+    }
+  }
+  
+  
+  .down-to-project {
+    display: inline-block;
+    position: fixed;
+    /* image replacement properties */
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    background: url(../img/down-project-arrow.svg) no-repeat center 50%;
+    background-color: rgba(255,255,255,0.6);
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s,
+      background-color 0.3s 0s, transform 1s ease-in-out;
+    transition: opacity 0.3s 0s, visibility 0s 0.3s, background-color 0.3s 0s,
+      transform 1s ease-in-out;
+  }
+  
+  .down-to-project:hover {
+    transform: scale(1.1);
+  }
+  
+  
+  .down-to-project.down-to-project--show {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  
+  @media only screen and (max-width: 768px) {
+    .down-to-project {
+      display: none;
+    }
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .down-to-project {
+      height: 2.5rem;
+      width: 2.5rem;
+      background-size: 100%;
+      right: 2.22rem;
+      bottom: 2.22rem;
+    }
+  }
+  
