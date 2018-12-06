@@ -125,6 +125,12 @@ p {
   line-height: 1.7rem !important;
 }
 
+h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.7rem !important;
+}
+
 a:hover {
   text-decoration: none;
   color: #282828;
@@ -319,7 +325,15 @@ footer {
   background-color: rgb(0, 0, 0);
   opacity: 0.1;
   overflow-x: hidden;
+  -webkit-transition: opacity 5s ease-in-out;
+  transition: opacity 5s ease-in-out;
 }
+
+.overlay.myNav--show {
+  display: block;
+  opacity: 0.925;
+}
+
 
 .overlay-content {
   position: relative;
@@ -329,18 +343,16 @@ footer {
 }
 
 .overlay-content a {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  letter-spacing: 0.222rem;
+  text-transform: uppercase;
   margin-right: 16px;
   margin-bottom: 16px;
-  text-decoration: none;
-  font-size: 1.5em;
-  color: #818181;
+  font-size: 1rem;
+  color: #e0e0e0 !important;
   display: block;
   transition: 0.3s;
-}
-
-.overlay-content a:hover,
-.overlay a:focus {
-  color: #f1f1f1;
 }
 
 .overlay .closebtn {
@@ -352,17 +364,8 @@ footer {
 }
 
 .closebtn svg path {
-  fill: #f1f1f1;
+  fill: #e0e0e0;
   transition: 0.3s;
-}
-
-.closebtn svg:hover path {
-  fill: green;
-}
-
-#myNav {
-  opacity: 0;
-  transition: 4s ease-in-out;
 }
 
 /*--------------- Back to Top ---------------*/
@@ -375,7 +378,6 @@ footer {
   text-indent: 100%;
   white-space: nowrap;
   background: url(../img/back-to-top-arrow.svg) no-repeat center 50%;
-  background-color: rgba(255,255,255,0.6);
   visibility: hidden;
   opacity: 0;
   -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s,
@@ -396,8 +398,8 @@ footer {
 
 @media only screen and (max-width: 768px) {
   .back-to-top {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     right: 16px;
     bottom: 16px;
     background-size: 100%;
@@ -464,6 +466,13 @@ footer {
   .about p {
     margin-top: 2rem;
   }
+
+  .about img{
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -523,6 +532,10 @@ footer {
 
 /*--------------- Project Sites ---------------*/
 
+.col-sm-12{
+  overflow:hidden;
+}
+
 .logoSenseChess {
   max-width: 66.66rem;
   margin: auto;
@@ -541,6 +554,13 @@ footer {
     padding-top: 1.5rem;
   }
 
+  .logoSenseChess {
+    max-width: 66.66rem;
+    margin: auto;
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+  }
+
 }
 
 
@@ -551,7 +571,13 @@ footer {
   margin-bottom: 3rem;
 }
 
+.shortDescription h2{
+  margin-top: 0rem;
+
+}
+
 .names h5{
+  max-width: 27.778rem;
   margin-left: 0.887rem;
   margin-right: 0.887rem;
   font-size: 0.7777777777777778rem;
@@ -567,10 +593,48 @@ footer {
     margin-right: 2rem;
   }
 
+  .names {
+    margin-top: 3rem;
+  }
+
 }
 
-.contentProjects{
+@media only screen and (max-width: 768px) {
+  .shortDescription p, h5{
+    margin: auto !important;
+    margin-bottom: 0.55rem !important;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .names{
+    margin-top: 3rem;
+  }
+
+  .contentProjects p, h3{
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+
+.contentProjects img{
+  width: 100%;
   max-width: 66.66rem;
+  margin-top: 1.667rem !important;
+  margin-bottom: 1.667rem !important;
+  margin:0 auto;
+  display: block;
+  padding-right: 0.889rem;
+  padding-left: 0.889rem;
+}
+
+.twoPic {
+  max-width: 66.66rem;
+  margin:0 auto;
+}
+
+.contentProjects p, h3{
+  max-width: 30rem;
   margin: auto;
   margin-top: 1.667rem;
   margin-bottom: 1.667rem;
@@ -588,4 +652,5 @@ footer {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: 1.667rem !important;
 }

@@ -14,67 +14,65 @@
 
 
   if (backTop && downProject) {
-      window.addEventListener("scroll", function (event) {
-        if (!scrolling) {
-          scrolling = true;
-          if (window.requestAnimationFrame == false) {
-            setTimeout(checkBackToTop, 250)
-            setTimeout(checkDownToProject, 250)    
-          }
-          else {
-            window.requestAnimationFrame(checkBackToTop);
-            window.requestAnimationFrame(checkDownToProject);    
-          }
-        }
-      });
-  
-      backTop.addEventListener("click", function (event) {
-        event.preventDefault();
+    window.addEventListener("scroll", function (event) {
+      if (!scrolling) {
+        scrolling = true;
         if (window.requestAnimationFrame == false) {
-          window.scrollTo(0, 0)
+          setTimeout(checkBackToTop, 250)
+          setTimeout(checkDownToProject, 250)
         }
         else {
-          scrollTo(scrollDuration, 0);
+          window.requestAnimationFrame(checkBackToTop);
+          window.requestAnimationFrame(checkDownToProject);
         }
-      });
-  
-      downProject.addEventListener("click", function (event) {
-        console.log("hi");
-        event.preventDefault();
-        var destination = getDestinationDown();
-        if (window.requestAnimationFrame == false) {
-          window.scrollTo(0, destination)
-        }
-        else {
-          scrollTo(scrollDuration, destination);
-        }
-      });
-    }  
+      }
+    });
+
+    backTop.addEventListener("click", function (event) {
+      event.preventDefault();
+      if (window.requestAnimationFrame == false) {
+        window.scrollTo(0, 0)
+      }
+      else {
+        scrollTo(scrollDuration, 0);
+      }
+    });
+
+    downProject.addEventListener("click", function (event) {
+      event.preventDefault();
+      var destination = getDestinationDown();
+      if (window.requestAnimationFrame == false) {
+        window.scrollTo(0, destination)
+      }
+      else {
+        scrollTo(scrollDuration, destination);
+      }
+    });
+  }
 
   else if (downProject) {
-    console.log("down")
-      window.addEventListener("scroll", function (event) {
-        if (!scrolling) {
-          scrolling = true;
-          if (window.requestAnimationFrame == false) {
-            setTimeout(checkDownToProject, 250)
-          }
-          else {
-            window.requestAnimationFrame(checkDownToProject);
-          }
-        }
-      });
-
-      downProject.addEventListener("click", function (event) {
-        event.preventDefault();
-        var destination = getDestinationDown();
+    window.addEventListener("scroll", function (event) {
+      if (!scrolling) {
+        scrolling = true;
         if (window.requestAnimationFrame == false) {
-          window.scrollTo(0, destination)
+          setTimeout(checkDownToProject, 250)
         }
         else {
-          scrollTo(scrollDuration, destination);
+          window.requestAnimationFrame(checkDownToProject);
         }
-      });
+      }
+    });
+
+    downProject.addEventListener("click", function (event) {
+      event.preventDefault();
+      var destination = getDestinationDown();
+      if (window.requestAnimationFrame == false) {
+        window.scrollTo(0, destination)
+      }
+      else {
+        scrollTo(scrollDuration, destination);
+      }
+    });
   }
 
 
@@ -83,10 +81,10 @@
       if (!scrolling) {
         scrolling = true;
         if (window.requestAnimationFrame == false) {
-          setTimeout(checkBackToTop, 250)    
+          setTimeout(checkBackToTop, 250)
         }
         else {
-          window.requestAnimationFrame(checkBackToTop);    
+          window.requestAnimationFrame(checkBackToTop);
         }
       }
     });
@@ -102,7 +100,7 @@
     });
   }
 
-  
+
 
   function getDestinationDown() {
     var top1 = ($("#firstEntry").position()).top;
@@ -113,8 +111,8 @@
     var windowMiddle = window.scrollY + (0.5 * window.innerHeight);
     var destination = -(0.5 * window.innerHeight);
 
-    if (windowMiddle < (top1 + (0.5*height1) -10)) { destination += (top1 + (0.5*height1)) }
-    else if (windowMiddle < (top2 + (0.5*height2) -10) && windowMiddle >= (top1 + (0.5*height1) -10)) { destination += (top2 + (0.5*height2)) }
+    if (windowMiddle < (top1 + (0.5 * height1) - 10)) { destination += (top1 + (0.5 * height1)) }
+    else if (windowMiddle < (top2 + (0.5 * height2) - 10) && windowMiddle >= (top1 + (0.5 * height1) - 10)) { destination += (top2 + (0.5 * height2)) }
     return destination;
   }
 
@@ -172,38 +170,40 @@
     return -c / 2 * (t * (t - 2) - 1) + b;
   };
 
-  function hasClass(el, className) {
-    if (el.classList) return el.classList.contains(className);
-    else
-      return !!el.className.match(
-        new RegExp("(\\s|^)" + className + "(\\s|$)")
-      );
-  }
-  function addClass(el, className) {
-    var classList = className.split(" ");
-    if (el.classList) el.classList.add(classList[0]);
-    else if (!hasClass(el, classList[0])) el.className += " " + classList[0];
-    if (classList.length > 1) addClass(el, classList.slice(1).join(" "));
-  }
-  function removeClass(el, className) {
-    var classList = className.split(" ");
-    if (el.classList) el.classList.remove(classList[0]);
-    else if (hasClass(el, classList[0])) {
-      var reg = new RegExp("(\\s|^)" + classList[0] + "(\\s|$)");
-      el.className = el.className.replace(reg, " ");
-    }
-    if (classList.length > 1) removeClass(el, classList.slice(1).join(" "));
-  }
+
 })();
 
+function hasClass(el, className) {
+  if (el.classList) return el.classList.contains(className);
+  else
+    return !!el.className.match(
+      new RegExp("(\\s|^)" + className + "(\\s|$)")
+    );
+}
+function addClass(el, className) {
+  var classList = className.split(" ");
+  if (el.classList) el.classList.add(classList[0]);
+  else if (!hasClass(el, classList[0])) el.className += " " + classList[0];
+  if (classList.length > 1) addClass(el, classList.slice(1).join(" "));
+}
+function removeClass(el, className) {
+  var classList = className.split(" ");
+  if (el.classList) el.classList.remove(classList[0]);
+  else if (hasClass(el, classList[0])) {
+    var reg = new RegExp("(\\s|^)" + classList[0] + "(\\s|$)");
+    el.className = el.className.replace(reg, " ");
+  }
+  if (classList.length > 1) removeClass(el, classList.slice(1).join(" "));
+}
+
 function openNav() {
-  document.getElementById("myNav").style.display = "block";
-  document.getElementById("myNav").style.opacity = "0.9";
+  var myNav = document.getElementsByClassName("script-myNav")[0];
+  addClass(myNav, "myNav--show");
 }
 
 function closeNav() {
-  document.getElementById("myNav").style.display = "none";
-  document.getElementById("myNav").style.opacity = "0";
+  var myNav = document.getElementsByClassName("script-myNav")[0];
+  removeClass(myNav, "myNav--show");
 }
 
 function chSize(bla, blub) {
@@ -213,47 +213,3 @@ function chSize(bla, blub) {
     document.getElementById(blub).style.transform = "scale(1)";
   }
 }
-
-
-
-/*! getEmPixels  | Author: Tyson Matanich (http://matanich.com), 2013 | License: MIT */
-(function (document, documentElement) {
-  // Enable strict mode
-  "use strict";
-
-  // Form the style on the fly to result in smaller minified file
-  var important = "!important;";
-  var style = "position:absolute" + important + "visibility:hidden" + important + "width:1em" + important + "font-size:1em" + important + "padding:0" + important;
-
-  window.getEmPixels = function (element) {
-
-      var extraBody;
-
-      if (!element) {
-          // Emulate the documentElement to get rem value (documentElement does not work in IE6-7)
-          element = extraBody = document.createElement("body");
-          extraBody.style.cssText = "font-size:1em" + important;
-          documentElement.insertBefore(extraBody, document.body);
-      }
-
-      // Create and style a test element
-      var testElement = document.createElement("i");
-      testElement.style.cssText = style;
-      element.appendChild(testElement);
-
-      // Get the client width of the test element
-      var value = testElement.clientWidth;
-
-      if (extraBody) {
-          // Remove the extra body element
-          documentElement.removeChild(extraBody);
-      }
-      else {
-          // Remove the test element
-          element.removeChild(testElement);
-      }
-
-      // Return the em value in pixels
-      return value;
-  };
-}(document, document.documentElement));

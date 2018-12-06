@@ -35,7 +35,7 @@
             </a>
         </nav>
 
-        <div id="myNav" class="overlay">
+        <div id="myNav" class="overlay script-myNav">
 
             <!-- Button to close the overlay navigation -->
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
@@ -51,6 +51,8 @@
                 <a href="">Projects</a>
                 <a target="_blank" rel="noopener noreferrer" href="../../img/resume.pdf">Resume</a>
                 <a href="../../about/index.html">About</a>
+                <br />
+                <a href="../../de/projekte/sense-chess/index.html" class="language"><b>EN</b><span>&#x2009|&#x2009</span>DE</a>
             </div>
 
         </div>
@@ -64,7 +66,11 @@
         <div class="shortDescription">
             <div class="row">
                 <div class="col-sm-8">
-                    <p></p>
+                    <h2>sense-chess</h2>
+                    <p>solves the problem of conventional chess being unenjoyable when players of different skill levels compete against each other.
+                        Trough the intuitive interaction of merely touching a chess piece, the player can get helping information trough fields lighting up and indicating possible moves, good moves or better choices in figures.
+                        While sensing the touch and movement we can later provide further information on the gameplay in an app and therefor even help improve andvanced player's gameplay.
+                    </p>
                 </div>
                 <div class="col-sm-4 names">
                     <h5>Team</h5>
@@ -87,15 +93,46 @@
         </div>
 
         <div class="contentProjects">
-            <div class="row">
+           
+            <div class="col-sm-12">
+                <h3>Interaction</h3>
+                <p>To make it accessible even for the most inexperienced player, the physical board has in it's basic form just one touchpoint which are the chess pieces.
+                    Depending on how long you hold on to one figure multiple steps of guidance show up on the board.<br/>
+                    First it shows all the possible moves you can do with this figure. <br/>
+                    After that you get a suggestion on where to put your figure. <br/>
+                    If you're still holding on and hold back on you're move, a field under a figure which suits your current gameplay best, lights up. <br/>
+                    Ultimately the best move is shown to you.
+                </p>
+            </div>
+            <div class="col-sm-12">
+                <img src="../../img/01_03_Hand.jpg"/>
+            </div>
+            <div class="col-sm-12">
+                <h3>Look and Feel</h3>
+                <p>The physical components are designed to be as close as possible to the original, understanable and destinguishable for better transferability between this game and any other the user might got in touch with or will in the future.
+                    Still we managed to shape the board and chess pieces in a modern, clean and elegant fashion.
+                </p>
+            </div>
+            <div class="row twoPic">
                 <div class="col-sm-6">
-                    <img src="../../img/01_03_Explosiv.svg" alt="sense-chess" class="w3-image" />
+                    <img src="../../img/01_04_LookandFeel1.jpg"/>
                 </div>
-                <div class="col-sm-2"></div>
-                <div class="col-sm-4">
-                    <p></p>
+                <div class="col-sm-6">
+                    <img src="../../img/01_04_LookandFeel2.jpg"/>
                 </div>
             </div>
+            <div class="row twoPic vertical-align">
+                    <div class="col-sm-6">
+                        <h3>Structure</h3>
+                        <p>Building the chessboard with the goal of keeping it small and maintaining a good form design was challenging.
+                            With planning ahead we still managed to fit everything, including arduinos and enough space for the LEDs to stray their light, in a convenient size.
+                            
+                        </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="../../img/01_05_Explosiv.svg"/>
+                    </div>
+                </div>
         </div>
 
         <div id="bottom"></div>
