@@ -107,13 +107,21 @@
     var height1 = $("#firstEntry").height();
     var top2 = ($("#secondEntry").position()).top;
     var height2 = $("#secondEntry").height();
+    var top3 = ($("#thirdEntry").position()).top;
+    var height3 = $("#thirdEntry").height();
+    var top4 = ($("#fourthEntry").position()).top;
+    var height4 = $("#fourthEntry").height();
 
     var windowMiddle = window.scrollY + (0.5 * window.innerHeight);
     var destination = -(0.5 * window.innerHeight);
 
     if (windowMiddle < (top1 + (0.5 * height1) - 10)) { destination += (top1 + (0.5 * height1)) }
     else if (windowMiddle < (top2 + (0.5 * height2) - 10) && windowMiddle >= (top1 + (0.5 * height1) - 10)) { destination += (top2 + (0.5 * height2)) }
+    else if (windowMiddle < (top3 + (0.5 * height3) - 10) && windowMiddle >= (top2 + (0.5 * height2) - 10)) { destination += (top3 + (0.5 * height3)) }
+    else if (windowMiddle < (top4 + (0.5 * height4) - 10) && windowMiddle >= (top3 + (0.5 * height3) - 10)) { destination += (top4 + (0.5 * height4)) }
+    console.log("destination: " + destination);
     return destination;
+
   }
 
   function getDestinationUp() {
@@ -139,9 +147,10 @@
   }
 
   function checkDownToProject() {
+    var last = ($("#fourthEntry").position()).top;
     var windowTop = window.scrollY || document.documentElement.scrollTop;
-    if (windowTop < 1400 && windowTop > 100) { addClass(downProject, "down-to-project--show"); }
-    else if (windowTop > 1400) { removeClass(downProject, "down-to-project--show"); }
+    if (windowTop < (last -20) && windowTop > 100) { addClass(downProject, "down-to-project--show"); }
+    else if (windowTop > (last + 40)) { removeClass(downProject, "down-to-project--show"); }
     scrolling = false;
   }
 
@@ -211,5 +220,14 @@ function chSize(bla, blub) {
     document.getElementById(blub).style.transform = "scale(1.05)";
   } else {
     document.getElementById(blub).style.transform = "scale(1)";
+  }
+}
+
+function showText(bla, blub) {
+  if (bla > 0) {
+    document.getElementById(blub).style.opacity = "1";
+  } else {
+    document.getElementById(blub).style.opacity = "0";
+    console.log("none");
   }
 }
