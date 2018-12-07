@@ -130,7 +130,7 @@
     var top2 = ($("#secondEntry").position()).top;
     var height2 = $("#secondEntry").height();
 
-    var windowMiddle = window.scrollY + (0.5 * window.innerHeight);
+    
     var destination = -(0.5 * window.innerHeight);
 
     if (windowTop > 450 && windowTop < 1400) { destination = 450 }
@@ -147,10 +147,12 @@
   }
 
   function checkDownToProject() {
-    var last = ($("#fourthEntry").position()).top;
+    var last = (($("#fourthEntry").position()).top + (0.5 * $("#fourthEntry").height()));
     var windowTop = window.scrollY || document.documentElement.scrollTop;
-    if (windowTop < (last -20) && windowTop > 100) { addClass(downProject, "down-to-project--show"); }
-    else if (windowTop > (last + 40)) { removeClass(downProject, "down-to-project--show"); }
+    var windowMiddle = window.scrollY + (0.5 * window.innerHeight);
+    console.log("last: " + last + "middle: " + windowMiddle);
+    if (windowMiddle <= (last -5) && windowTop > 100) { addClass(downProject, "down-to-project--show"); }
+    else if (windowMiddle > (last -5)) { removeClass(downProject, "down-to-project--show"); }
     scrolling = false;
   }
 

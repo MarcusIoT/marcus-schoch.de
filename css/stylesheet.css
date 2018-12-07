@@ -105,6 +105,11 @@ header {
   margin-bottom: 5.556rem;
 }
 
+header p, header h2 {
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
 p,
 h2 {
   margin-left: 0.889rem;
@@ -170,7 +175,7 @@ footer {
   color: black;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .copyright {
     display: block;
     margin: auto;
@@ -242,62 +247,24 @@ footer {
   padding-left: 0px;
 }
 
-.projectNavigation {
-  overflow: hidden;
-  margin-top: 1rem;
-}
-
-.projectNavigation p {
-  font-weight: 400; 
-  letter-spacing: 0.222rem; 
-  text-transform: uppercase; 
-  font-size: 0.7rem; 
-  color: #8E8E8E !important; 
-  text-align: center; 
-  opacity: 0; 
-  transition: opacity 0.7s;
-  margin-bottom: 0px;
-}
-
-.rightArrow {
-  float: right;
-  display: block; 
-  position: relative; 
-  height: 45px; 
-  display: flex; 
-  align-items: center;
-}
-
-.leftArrow {
-  float: left;
-  display: block; 
-  position: relative; 
-  height: 45px; 
-  display: flex; 
-  align-items: center;
-}
-
-
-
-@media only screen and (max-width: 768px) {
-  .row {
-    margin-bottom: 60px;
+@media only screen and (max-width: 767px) {
+  .b65 {
+    margin-bottom: 3rem;
   }
 
-  #firstEntry p,
-  #secondEntry p {
+  .parent p {
     margin-left: 16px;
     margin-right: 16px;
     line-height: 2em;
+    margin-bottom: 1.667rem;
   }
 
-  #firstEntry h1,
-  #secondEntry h1 {
+  .parent h1 {
     margin-left: 16px;
     margin-right: 16px;
-    font-size: 1.8rem;
-    font-weight: bold;
-    letter-spacing: 4px;
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
   }
 
   .projectSection span {
@@ -305,28 +272,7 @@ footer {
   }
 
   .parent {
-    margin-bottom: 7rem;
-  }
-
-  .leftArrow svg {
-    margin-left: 0px;
-  }
-
-  .rightArrow svg {
-    margin-right: 0px;
-  }
-
-  .projectNavigation svg {
-    width: 30px;
-    height: 30px;
-  }
-
-  .projectNavigation p { 
-    opacity: 1; 
-  }
-
-  #inlineProject {
-    display: none;
+    margin-bottom: 1.667rem !important;
   }
 }
 
@@ -351,28 +297,8 @@ footer {
     letter-spacing: 0rem;
   }
 
-  .parent {
-    overflow: auto;
-    display: block;
-  }
-
   .b65 {
     margin-bottom: 6.5rem;
-  }
-
-  .leftArrow svg {
-    margin-left: 2.22rem;
-  }
-
-  .rightArrow svg {
-    margin-right: 2.22rem;
-  }
-
-  .projectNavigation {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 2rem;
-    z-index: 100;
   }
 }
 
@@ -423,7 +349,7 @@ footer {
   height: 20px;
   text-align: right;
   float: right;
-  margin-top: 27px;
+  margin-top: 23px;
   margin-right: 16px;
 }
 
@@ -461,7 +387,7 @@ footer {
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .back-to-top {
     height: 30px;
     width: 30px;
@@ -527,7 +453,7 @@ footer {
   opacity: 1;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .about p {
     margin-top: 2rem;
   }
@@ -570,7 +496,7 @@ footer {
   margin-top: 6.667rem;
 }
 
-.imprintBlock h1, h2, h3{
+.imprintBlock h1, .imprintBlock h2, .imprintBlock h3{
   margin-left: 0.889rem;
   margin-right: 0.889rem;
 }
@@ -613,7 +539,44 @@ footer {
   margin: auto;
 }
 
-@media only screen and (max-width: 768px) {
+.projectNavigation {
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.projectNavigation p {
+  font-weight: 400; 
+  letter-spacing: 0.222rem; 
+  text-transform: uppercase; 
+  font-size: 0.7rem; 
+  color: #8E8E8E !important; 
+  text-align: center; 
+  opacity: 0; 
+  transition: opacity 0.7s;
+  margin-bottom: 0px;
+}
+
+.projectNavigation svg {
+  display: block;
+}
+
+.rightArrow {
+  float: right;
+  position: relative; 
+  height: 45px; 
+  display: flex; 
+  align-items: center;
+}
+
+.leftArrow {
+  float: left;
+  position: relative; 
+  height: 45px; 
+  display: flex; 
+  align-items: center;
+}
+
+@media only screen and (max-width: 767px) {
 
   .projectHeaderContent {
     padding-top: 1.5rem;
@@ -662,9 +625,31 @@ footer {
     margin-top: 3rem;
   }
 
+  .leftArrow svg {
+    margin-left: 2.22rem;
+  }
+
+  .rightArrow svg {
+    margin-right: 2.22rem;
+  }
+
+  .projectNavigation {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 2rem;
+    z-index: 100;
+  }
+
+  .twoPic-text{
+    padding-left: 16px;
+  }
+
+  .a-hide {
+    display: none;
+  }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .shortDescription p, h5{
     margin: auto !important;
     margin-bottom: 0.55rem !important;
@@ -684,12 +669,33 @@ footer {
     margin-top: 3rem;
   }
 
-  .contentProjects p, h3{
+  .contentProjects p, .contentProjects h3{
     padding-right: 16px;
     padding-left: 16px;
   }
 
   .parallaxPicture {
+    display: none;
+  }
+
+  .leftArrow svg {
+    margin-left: 0px;
+  }
+
+  .rightArrow svg {
+    margin-right: 0px;
+  }
+
+  .projectNavigation svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .projectNavigation p { 
+    opacity: 1; 
+  }
+
+  #inlineProject {
     display: none;
   }
 }
@@ -778,8 +784,12 @@ footer {
   -webkit-box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.75);
 -moz-box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.75);
 box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.75);
+padding-left: 0%;
+padding-right: 0%;
 }
 
-.twoPic-text{
-  padding-left: 16px;
+.poster {
+  margin-right: 16px;
+  margin-left: 16px;
+  overflow: visible;
 }
