@@ -146,6 +146,10 @@ b {
   padding-top: 4.444rem;
 }
 
+.bottomProjects {
+  padding-top: 2.222rem !important;
+}
+
 #footer {
   position: absolute;
   bottom: 0;
@@ -206,14 +210,6 @@ footer {
 .left img {
   position: absolute;
   left: 0px;
-}
-
-.projectSection {
-  scroll-snap-type: y mandatory;
-}
-
-.projectSection > section {
-  Scroll-snap-coordinate: none;
 }
 
 .projectSection img {
@@ -328,6 +324,10 @@ footer {
   .projectNavigation p { 
     opacity: 1; 
   }
+
+  #inlineProject {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -351,6 +351,11 @@ footer {
     letter-spacing: 0rem;
   }
 
+  .parent {
+    overflow: auto;
+    display: block;
+  }
+
   .b65 {
     margin-bottom: 6.5rem;
   }
@@ -362,6 +367,13 @@ footer {
   .rightArrow svg {
     margin-right: 2.22rem;
   }
+
+  .projectNavigation {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 2rem;
+    z-index: 100;
+  }
 }
 
 /*--------------- Overlay ---------------*/
@@ -371,7 +383,7 @@ footer {
   width: 100%;
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 101;
   left: 0;
   top: 0;
   background-color: rgb(0, 0, 0);
@@ -676,6 +688,10 @@ footer {
     padding-right: 16px;
     padding-left: 16px;
   }
+
+  .parallaxPicture {
+    display: none;
+  }
 }
 
 .contentProjects {
@@ -755,4 +771,15 @@ footer {
   margin-top: 1.667rem;
   margin-bottom: 3rem;
   overflow: hidden;
+}
+
+.poster img {
+  max-width: 40rem;
+  -webkit-box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.75);
+}
+
+.twoPic-text{
+  padding-left: 16px;
 }
