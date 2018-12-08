@@ -126,14 +126,19 @@ h2 {
 
 p {
   max-width: 27.778rem;
-  font-size: 0.889rem;
-  line-height: 1.7rem !important;
+  font-size: 0.92rem;
+  line-height: 1.8rem !important;
 }
 
 h3 {
   font-size: 1.3rem;
   font-weight: 500;
   line-height: 1.7rem !important;
+}
+
+.material-icons {
+  font-size: 0.889rem !important;
+  bottom: 0;
 }
 
 a:hover {
@@ -527,6 +532,10 @@ footer {
   overflow:hidden;
 }
 
+.col-sm-6{
+  overflow:hidden;
+}
+
 .logoSenseChess {
   max-width: 66.66rem;
   margin: auto;
@@ -608,12 +617,12 @@ footer {
   max-width: 27.778rem;
   margin-left: 0.887rem;
   margin-right: 0.887rem;
-  font-size: 0.7777777777777778rem;
+  font-size: 0.8rem;
   font-weight: 500;
 }
 
 .names p{
-  font-size: 0.7777777777777778rem;
+  font-size: 0.8rem;
 }
 
 @media only screen and (min-width: 768px) {
@@ -627,17 +636,19 @@ footer {
 
   .leftArrow svg {
     margin-left: 2.22rem;
+    z-index: 100;
   }
 
   .rightArrow svg {
     margin-right: 2.22rem;
+    z-index: 100;
   }
 
   .projectNavigation {
     position: sticky;
     position: -webkit-sticky;
     top: 2rem;
-    z-index: 100;
+    z-index: 80;
   }
 
   .twoPic-text{
@@ -695,7 +706,7 @@ footer {
     opacity: 1; 
   }
 
-  #inlineProject {
+  .p-hide {
     display: none;
   }
 }
@@ -711,8 +722,8 @@ footer {
   margin-bottom: 1.667rem !important;
   margin:0 auto;
   display: block;
-  padding-right: 0.889rem;
-  padding-left: 0.889rem;
+  padding-right: 16px;
+  padding-left: 16px;
 }
 
 .twoPic {

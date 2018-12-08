@@ -62,10 +62,13 @@
         <div class="projectNavigation">
             <div class="rightArrow">
                 <a href="../courtshare/index.html" class="a-hide">
-                    <p id="next">
-                        next<span id="inlineProject"> project</span>
+                    <p>
+                        next
                     </p>
                 </a>
+                <p id="next" class="p-hide">
+                    next project
+                </p>
                 <a href="../courtshare/index.html">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                         onmouseover="showText(1, 'next')" onmouseout="showText(0, 'next')" height="45px" width="45px" x="0px"
@@ -101,10 +104,13 @@
                     </svg>
                 </a>
                 <a href="../LostBrick/index.html" class="a-hide">
-                    <p id="previous">
-                        previous<span id="inlineProject"> project</span>
+                    <p>
+                        previous
                     </p>
                 </a>
+                <p id="previous" class="p-hide">
+                    previous project
+                </p>
             </div>
         </div>
 
@@ -197,14 +203,35 @@
                 </div>
             </div>
 
+            <div class="row">
             <div class="col-sm-12">
-                <h3>Function</h3>
-                <p>
+                <h3>Sensing</h3>
+                <p>The sensing of a touch to a figure works with a 8x8 grid of home build capacititve sensors out of a thin strip of copper foil under the field, read by an Arduino Mega.
+                    Furthermore the figures needing to be conductive to reduce the gap between sensor and the bodys capacity to just the height of the acrylic glass.
+                    That's why we printed them with conductive PLA.
                 </p>
             </div>
+            </div>
 
+            <div class="row">
             <div class="col-sm-12">
                 <img src="../../img/01_06_Matrix.jpg" />
+            </div>
+            </div>
+
+            <div class="row twoPic vertical-align">
+                <div class="col-sm-6 col-sm-push-6 twoPic-text">
+                        <h3>Communication</h3>
+                        <p>
+                            We split information processing in various parts of the project because of faster prototyping and library usage.
+                            In Terms of reliability we went with a communication via USB between the Arduino and the server, which is locally executed to not be reliant on any network while prototyping or testing in any situation.
+                            Processing is used to send and receive signals from the Arduino and reading or writing in the databases, which were mandatory as they were a content in this lecture.
+                            The chess logic itself is a library running in JavaScript including chess AI and chess rules on our NodeJS server.
+                        </p>
+                </div>
+                <div class="col-sm-6 col-sm-pull-6">
+                    <img src="../../img/01_07_Information.svg" />
+                </div>    
             </div>
 
 
