@@ -303,7 +303,7 @@ footer {
   }
 
   .b65 {
-    margin-bottom: 6.5rem;
+    margin-bottom: 6.8rem;
   }
 }
 
@@ -709,6 +709,10 @@ footer {
   .p-hide {
     display: none;
   }
+
+  .freeTime {
+    margin-bottom: 2rem;
+  }
 }
 
 .contentProjects {
@@ -792,15 +796,44 @@ footer {
 
 .poster img {
   max-width: 40rem;
-  -webkit-box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.75);
-box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.75);
-padding-left: 0%;
-padding-right: 0%;
+
 }
 
-.poster {
+.shadow img {
+  -webkit-box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.75);
+  padding-left: 0%;
+  padding-right: 16px;
+}
+
+.shadow {
   margin-right: 16px;
   margin-left: 16px;
   overflow: visible;
+}
+
+.freeTime {
+  overflow: hidden;
+  margin-top: 6rem;
+}
+
+.freeTime img{
+  width: 100%;
+  max-width: 14.5rem;
+  margin-top: 1.667rem !important;
+  margin-bottom: 1.667rem !important;
+  margin:0 auto;
+  display: block;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.freeTime p, .freeTime h3{
+  max-width: 14.5rem;
+  margin: auto;
+  margin-top: 1.667rem;
+  margin-bottom: 1.667rem;
+  padding-right: 16px;
+  padding-left: 16px;
 }
