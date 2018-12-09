@@ -102,7 +102,7 @@ h1 {
 header {
   max-width: 66.66rem;
   margin: auto;
-  margin-bottom: 5.556rem;
+  margin-bottom: 11rem;
 }
 
 header p, header h2 {
@@ -834,6 +834,12 @@ footer {
   margin: auto;
   margin-top: 1.667rem;
   margin-bottom: 1.667rem;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.documentation p {
+  max-width: 66.66rem;
   padding-right: 16px;
   padding-left: 16px;
 }

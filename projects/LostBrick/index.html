@@ -59,7 +59,7 @@
 
         <div class="projectNavigation">
             <div class="rightArrow">
-                <a href="../sense-chess/index.html" class="a-hide">
+                <a href="../freetime/index.html" class="a-hide">
                     <p>
                         next
                     </p>
@@ -67,7 +67,7 @@
                 <p id="next" class="p-hide">
                     next project
                 </p>
-                <a href="../sense-chess/index.html">
+                <a href="../freetime/index.html">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                         onmouseover="showText(1, 'next')" onmouseout="showText(0, 'next')" height="45px" width="45px" x="0px"
                         y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
@@ -127,6 +127,16 @@
                 <div class="col-sm-8">
                     <h2>LostBrick</h2>
                     <p>
+                        The idea of this Jump ‘n’ Run game revolves around a cuboid which breaks loose from a corner of
+                        the ingame world - a prism. The players task is to navigate the cuboid through and around the
+                        four sides of the prism to the place it broke loose from. <br />
+
+                        The player is faced with a new challenge on each side with changing of the direction for each
+                        side. Changing sides occurs
+                        once the player moves on the lighter colored parts on a ledge. It is not shown to the player to
+                        which side the prism is going to turn. The alternation between a 2 dimensional view in parallel
+                        perspective and a 3 dimensional view while changing sides gives this game the appeal of a
+                        puzzle with an intellectual demand.
                     </p>
                 </div>
                 <div class="col-sm-4 names">
@@ -149,8 +159,12 @@
 
         <div class="contentProjects">
             <div class="col-sm-12">
-                <h3>Function</h3>
+                <h3>Development</h3>
                 <p>
+                    The games code was written in Javascript with integration of the Box2D physic simulation library.
+                    To give the game world more dynamics and indicate the current gravity, rain is placed globally in
+                    the game simulated with functions of Box2D. All the other graphical elements, except the game
+                    figure or the character, were created and animated in Cinema4D.
                 </p>
             </div>
             <div class="col-sm-12">
@@ -162,6 +176,11 @@
             <div class="col-sm-12">
                 <h3>Controller</h3>
                 <p>
+                    Our intentions for the design of the controller was to keep it as simple and sleek as possible with
+                    only the necessary control elements in place. The body was created in a 3D printer, in which a
+                    MakeyMakey receives impulses and gives it via USB to a computer. Those impulses are transferred
+                    through an aluminum steering cross from your hand to the MakeyMakey, where the circuit with a
+                    ground to the hand is closed and a command further given to a computer.
                 </p>
             </div>
             <div class="col-sm-12">
