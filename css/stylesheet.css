@@ -431,9 +431,11 @@ footer {
 }
 
 .socialMediaIcons {
+  clear: both;
   padding-inline-start: 0.889rem;
   list-style: none;
   margin-top: 1.111rem;
+  padding-left: 16px;
 }
 
 .socialMediaIcons li {
