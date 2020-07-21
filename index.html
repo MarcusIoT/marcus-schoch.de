@@ -84,7 +84,7 @@
               </a>
             </p>
           </div>
-          <div class="col-sm-5 col-md-6 right">
+          <div class="col-sm-5 col-md-6 right" smooth-parallax="" end-movement="1" start-movement="0.5" start-position-y="0" end-position-y="-0.3" end-position-x="0">
             <span>
               <img id="one" src="img/01_Picnew.png" alt="sense-chess" class="w3-image" />
               <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -121,7 +121,7 @@
               </a>
             </p>
           </div>
-          <div class="col-sm-5 col-sm-pull-7 col-md-6 col-md-pull-6 left">
+          <div class="col-sm-5 col-sm-pull-7 col-md-6 col-md-pull-6 left" smooth-parallax="" end-movement="2" start-movement="0.5" end-position-y="-0.7" end-position-x="0">
             <span>
               <img id="two" src="img/02_Pic.png" alt="LostBrick" class="w3-image" />
               <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -236,6 +236,12 @@
 
 
     <script src="js/functions.js"></script>
+    <script type="text/javascript" src="js/smooth-parallax.js"></script>
+    <script type="text/javascript">
+      window.addEventListener("load", function () {
+        SmoothParallax.init();
+      });
+    </script>
   </div>
 
 </body>
