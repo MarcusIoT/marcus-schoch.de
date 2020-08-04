@@ -212,6 +212,25 @@ footer {
 
 /*--------------- Project Section ---------------*/
 
+.parent-test {
+  margin: auto;
+  display: flex;
+  max-width: 86.66rem;
+  justify-content: flex-end;
+}
+
+.test {
+  max-width: 43.33rem;
+}
+
+.text-test {
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: column;
+  align-items: flex-start;
+  width: 33.33rem;
+}
+
 .right img {
   position: absolute;
   right: 0px;
@@ -231,7 +250,7 @@ footer {
   top: 0;
   right: 0;
   float: right;
-  opacity: 0;
+  opacity: 1;
   max-width: 1920px;
 }
 
@@ -279,6 +298,7 @@ footer {
   .parent {
     margin-bottom: 1.667rem !important;
   }
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -288,15 +308,15 @@ footer {
   }
 
   .projectSection p {
-    margin-left: 8vw;
-    margin-right: 0.889rem;
+    margin-top: 16px;
     line-height: 1.8rem;
+    padding-left: 16px;
+    margin-left: 0px;
   }
 
   .projectSection h1 {
-    margin-left: 8vw;
-    margin-right: 0.889rem;
     margin-bottom: 1.667rem;
+    padding-left: 16px;
     font-size: 2rem;
     font-weight: 600;
     letter-spacing: 0rem;
