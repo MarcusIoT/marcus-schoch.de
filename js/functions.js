@@ -12,6 +12,32 @@
     scrollDuration = 700,
     scrolling = false;
 
+  var line = document.getElementById("animateLine");
+  var head = document.getElementById("head");
+  var tail = document.getElementById("tail");
+
+
+   
+  if  (line){
+    window.addEventListener("scroll", function (event) {
+      if (window.scrollY >= 500) {
+        head.style.transitionDelay = "1s";
+        tail.style.transitionDelay = "1s";
+        line.style.transform = "scaleX(1)";
+        head.style.transform = "translate(0, 0) scaleY(1)";
+        tail.style.transform = "translate(0, 0) scaleY(1)";
+      }
+      else if (window.scrollY < 500) {
+        head.style.transitionDelay = "0s";
+        tail.style.transitionDelay = "0s";
+        line.style.transform = "scaleX(0)";
+        head.style.transform = "translate(0, 16px) scaleY(0)";
+        tail.style.transform = "translate(0, -16px) scaleY(0)";
+      }
+    });
+    
+  }
+
 
   if (backTop && downProject) {
     window.addEventListener("scroll", function (event) {
@@ -103,8 +129,8 @@
 
 
   function getDestinationDown() {
-    var top1 = ($("#firstEntry").position()).top;
-    var height1 = $("#firstEntry").height();
+    var top1 = ($("#firstEntry").position()).top - 100;
+    var height1 = $("#firstEntry").height() + 100;
     var top2 = ($("#secondEntry").position()).top;
     var height2 = $("#secondEntry").height();
     var top3 = ($("#thirdEntry").position()).top;

@@ -19,7 +19,7 @@ html {
 
 @media only screen and (min-width: 2560px) {
   html {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 
@@ -27,7 +27,7 @@ html {
   html {
     font-size: 36px;
   }
-}
+} 
 
 body {
   font-family: 'Montserrat';
@@ -102,7 +102,7 @@ h1 {
 header {
   max-width: 66.66rem;
   margin: auto;
-  margin-bottom: 11rem;
+  margin-bottom: 40vh;
 }
 
 header p, header h2 {
@@ -117,11 +117,10 @@ h2 {
 }
 
 h2 {
-  font-weight: 600;
-  margin-top: 6.667rem;
+  font-weight: 300;
+  margin-top: 20vh;
   margin-bottom: 1.667rem;
-  font-size: 1.5rem;
-  letter-spacing: 0.056rem;
+  font-size: 1.55rem;
 }
 
 p {
@@ -215,12 +214,51 @@ footer {
 .parent-test {
   margin: auto;
   display: flex;
+  position: relative;
   max-width: 86.66rem;
   justify-content: flex-end;
+  align-items: flex-end;
+  margin-bottom: 20rem !important;
+ 
 }
 
 .test {
+  display: inline-flex;
   max-width: 43.33rem;
+}
+
+#animateLine {
+  transform: scaleX(0);
+  transition-timing-function: ease-in;
+  transition: transform 1000ms;
+  transform-origin: right;
+}
+
+.text-test h1 {
+  transition: transform 100ms;
+  transition-delay: 1s;
+  transition-timing-function: ease-in-out;
+  transform: translate(0, 16px) scaleY(0);
+  transform-origin: bottom;
+}
+
+#tail {
+  display: block;
+  transition: transform 100ms;
+  transition-delay: 1s;
+  transition-timing-function: ease-in-out;
+  transform: translate(0, -16px) scaleY(0);
+  transform-origin: top;
+}
+
+#float {
+  transform: translate(0, -100px);
+  position: absolute;
+  width: 100%;
+  max-width: 43.33rem;
+  right: 10rem;
+  display: block;
+  z-index: 10;
 }
 
 .text-test {
@@ -229,6 +267,8 @@ footer {
   flex-flow: column;
   align-items: flex-start;
   width: 33.33rem;
+  vertical-align: bottom;
+  /*transform: translate(0, 520px);*/
 }
 
 .right img {
@@ -271,9 +311,41 @@ footer {
   padding-left: 0px;
 }
 
+@media only screen and (max-width: 1000px) {
+  #float {
+    display: flex;
+    margin: auto;
+    left: 50%;
+    transform: translate(-50%, -200px);
+  }
+  .text-test {
+    min-width: 350px;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .b65 {
     margin-bottom: 3rem;
+  }
+
+  .text-test {
+    display: none;
+  }
+
+  .test {
+    max-width: 60rem;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  #float {
+    transform: translate(0, -100px);
+    margin: auto;
+    padding-left: 32px;
+    padding-right: 32px;
+    right: 0px;
+    left: 0px;
+    display: flex;
   }
 
   .parent p {
@@ -309,16 +381,16 @@ footer {
 
   .projectSection p {
     margin-top: 16px;
-    line-height: 1.8rem;
+    line-height: 1.15rem;
     padding-left: 16px;
     margin-left: 0px;
   }
 
   .projectSection h1 {
-    margin-bottom: 1.667rem;
+    margin-bottom: 16px;
     padding-left: 16px;
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 1.55rem;
+    font-weight: 300;
     letter-spacing: 0rem;
   }
 
@@ -550,7 +622,6 @@ footer {
 
 /*--------------- Project Sites ---------------*/
 
-#cloud-1{left:20%;bottom:60%}
 
 .col-sm-12{
   overflow:hidden;

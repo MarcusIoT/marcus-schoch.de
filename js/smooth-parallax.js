@@ -142,6 +142,7 @@
       _height = positionData.container.scrollHeight;
       _scrollOffset = _viewPortHeight - positionData.container.getBoundingClientRect().top;
       _scrollPercent = _scrollOffset / _height;
+      /*console.log(_scrollPercent);*/
     }
 
     // Based on `pageScroll`
