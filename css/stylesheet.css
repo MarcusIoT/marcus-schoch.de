@@ -215,16 +215,20 @@ footer {
   margin: auto;
   display: flex;
   position: relative;
-  max-width: 86.66rem;
+  max-width: 84rem;
   justify-content: flex-end;
   align-items: flex-end;
   margin-bottom: 20rem !important;
  
 }
 
+#one {
+  opacity: 0;
+}
+
 .test {
   display: inline-flex;
-  max-width: 43.33rem;
+  max-width: 42rem;
 }
 
 #animateLine {
@@ -251,8 +255,12 @@ footer {
   transform-origin: top;
 }
 
+
 #float {
-  transform: translate(0, -100px);
+  transition: all 500ms ease-in-out;
+  --translate-y: -100px;
+  --scale: 1;
+  transform: translate(0, var(--translate-y)) scale(var(--scale));
   position: absolute;
   width: 100%;
   max-width: 43.33rem;
@@ -464,6 +472,7 @@ footer {
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
+  z-index: 20;
   background: url(../img/back-to-top-arrow.svg) no-repeat center 50%;
   visibility: hidden;
   opacity: 0;

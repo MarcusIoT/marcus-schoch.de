@@ -15,6 +15,7 @@
   var line = document.getElementById("animateLine");
   var head = document.getElementById("head");
   var tail = document.getElementById("tail");
+  
 
 
    
@@ -37,7 +38,6 @@
     });
     
   }
-
 
   if (backTop && downProject) {
     window.addEventListener("scroll", function (event) {
@@ -229,9 +229,9 @@ function closeNav() {
 
 function chSize(bla, blub) {
   if (bla > 0) {
-    document.getElementById(blub).style.transform = "scale(1.05)";
+    document.getElementById(blub).style.setProperty("--scale", 1.03);
   } else {
-    document.getElementById(blub).style.transform = "scale(1)";
+    document.getElementById(blub).style.setProperty("--scale", 1);
   }
 }
 
@@ -243,3 +243,10 @@ function showText(bla, blub) {
     document.getElementById(blub).style.opacity = "0";
   }
 }
+
+
+window.addEventListener('load', (event) => {
+  console.log('The page has fully loaded');
+  var first = document.getElementById("one");
+  first.style.opacity = "1";
+});
