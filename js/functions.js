@@ -12,28 +12,29 @@
     scrollDuration = 700,
     scrolling = false;
 
-  var line = document.getElementById("animateLine");
-  var head = document.getElementById("head");
-  var tail = document.getElementById("tail");
+  var descriptionLine = Array.from(document.querySelectorAll('h1 ~ svg'));
+  let descriptionTitle = Array.from(document.querySelectorAll('h1'));
+  var descriptionSubtitle = Array.from(document.querySelectorAll('svg ~ p'));
+  
   
 
 
    
-  if  (line){
+  if  (descriptionLine){
     window.addEventListener("scroll", function (event) {
-      if (window.scrollY >= 500) {
-        head.style.transitionDelay = "1s";
-        tail.style.transitionDelay = "1s";
-        line.style.transform = "scaleX(1)";
-        head.style.transform = "translate(0, 0) scaleY(1)";
-        tail.style.transform = "translate(0, 0) scaleY(1)";
+      if (window.scrollY >= (getDestinationDownExact(0)-100)) {
+        descriptionTitle[0].style.transitionDelay = "1s";
+        descriptionSubtitle[0].style.transitionDelay = "1s";
+        descriptionLine[0].style.transform = "scaleX(1)";
+        descriptionTitle[0].style.transform = "translate(0, 0) scaleY(1)";
+        descriptionSubtitle[0].style.transform = "translate(0, 0) scaleY(1)";
       }
-      else if (window.scrollY < 500) {
-        head.style.transitionDelay = "0s";
-        tail.style.transitionDelay = "0s";
-        line.style.transform = "scaleX(0)";
-        head.style.transform = "translate(0, 16px) scaleY(0)";
-        tail.style.transform = "translate(0, -16px) scaleY(0)";
+      else if (window.scrollY < (getDestinationDownExact(0)-100)) {
+        descriptionTitle[0].style.transitionDelay = "0s";
+        descriptionSubtitle[0].style.transitionDelay = "0s";
+        descriptionLine[0].style.transform = "scaleX(0)";
+        descriptionTitle[0].style.transform = "translate(0, 16px) scaleY(0)";
+        descriptionSubtitle[0].style.transform = "translate(0, -16px) scaleY(0)";
       }
     });
     
@@ -145,9 +146,27 @@
     else if (windowMiddle < (top2 + (0.5 * height2) - 10) && windowMiddle >= (top1 + (0.5 * height1) - 10)) { destination += (top2 + (0.5 * height2)) }
     else if (windowMiddle < (top3 + (0.5 * height3) - 10) && windowMiddle >= (top2 + (0.5 * height2) - 10)) { destination += (top3 + (0.5 * height3)) }
     else if (windowMiddle < (top4 + (0.5 * height4) - 10) && windowMiddle >= (top3 + (0.5 * height3) - 10)) { destination += (top4 + (0.5 * height4)) }
-    console.log("destination: " + destination);
     return destination;
+  }
 
+  function getDestinationDownExact(number) {
+    var top1 = ($("#firstEntry").position()).top - 100;
+    var height1 = $("#firstEntry").height() + 100;
+    var top2 = ($("#secondEntry").position()).top;
+    var height2 = $("#secondEntry").height();
+    var top3 = ($("#thirdEntry").position()).top;
+    var height3 = $("#thirdEntry").height();
+    var top4 = ($("#fourthEntry").position()).top;
+    var height4 = $("#fourthEntry").height();
+
+    var windowMiddle = window.scrollY + (0.5 * window.innerHeight);
+    var destination = -(0.5 * window.innerHeight);
+
+    if (number == 0) { destination += (top1 + (0.5 * height1)) }
+    else if (windowMiddle < (top2 + (0.5 * height2) - 10) && windowMiddle >= (top1 + (0.5 * height1) - 10)) { destination += (top2 + (0.5 * height2)) }
+    else if (windowMiddle < (top3 + (0.5 * height3) - 10) && windowMiddle >= (top2 + (0.5 * height2) - 10)) { destination += (top3 + (0.5 * height3)) }
+    else if (windowMiddle < (top4 + (0.5 * height4) - 10) && windowMiddle >= (top3 + (0.5 * height3) - 10)) { destination += (top4 + (0.5 * height4)) }
+    return destination;
   }
 
   function checkBackToTop() {
@@ -220,18 +239,23 @@ function removeClass(el, className) {
 function openNav() {
   var myNav = document.getElementsByClassName("script-myNav")[0];
   addClass(myNav, "myNav--show");
+  var html = document.getElementsByTagName("html") [0];
+  html.style.overflowY = 'hidden';
 }
 
 function closeNav() {
   var myNav = document.getElementsByClassName("script-myNav")[0];
   removeClass(myNav, "myNav--show");
+  var html = document.getElementsByTagName("html") [0];
+  html.style.overflowY = 'scroll';
 }
 
-function chSize(bla, blub) {
-  if (bla > 0) {
-    document.getElementById(blub).style.setProperty("--scale", 1.03);
+function chSize(value, number) {
+  let picture = document.getElementsByClassName("projectImage");
+  if (value > 0) {
+    picture[number].style.setProperty("--scale", 1.03);
   } else {
-    document.getElementById(blub).style.setProperty("--scale", 1);
+    picture[number].style.setProperty("--scale", 1);
   }
 }
 
@@ -253,4 +277,6 @@ window.addEventListener('load', (event) => {
   console.log('The page has fully loaded');
   var first = document.getElementById("one");
   first.style.opacity = "1";
+  var firstPic = document.getElementsByClassName("projectImageParentR")[0];
+  firstPic.style.opacity = "1";
 });

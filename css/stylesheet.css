@@ -211,7 +211,7 @@ footer {
 
 /*--------------- Project Section ---------------*/
 
-.parent-test {
+.parentProjects {
   margin: auto;
   display: flex;
   position: relative;
@@ -226,20 +226,20 @@ footer {
   opacity: 0;
 }
 
-.test {
+.projectBackground {
   transition: all 200ms ease-out;
   display: inline-flex;
   max-width: 42rem;
 }
 
-#animateLine {
+.projectDescriptionR svg {
   transform: scaleX(0);
   transition-timing-function: ease-in;
   transition: transform 1000ms;
   transform-origin: right;
 }
 
-.text-test h1 {
+.projectDescriptionR h1 {
   transition: transform 100ms;
   transition-delay: 1s;
   transition-timing-function: ease-in-out;
@@ -247,7 +247,7 @@ footer {
   transform-origin: bottom;
 }
 
-#tail {
+.subtitle {
   display: block;
   transition: transform 100ms;
   transition-delay: 1s;
@@ -257,7 +257,7 @@ footer {
 }
 
 
-#float {
+.projectImageParentR {
   transition: all 200ms ease-out;
   --translate-y: -100px;
   --scale: 1;
@@ -269,23 +269,21 @@ footer {
   right: 10rem;
   display: block;
   z-index: 10;
+  opacity: 0;
 }
 
-#floatImg {
+.projectImage {
   transition: all 200ms ease-in-out;
-  --translate-y: 0px;
   --scale: 1;
-  --translate-x: 0px;
-  transform: translate(var(--translate-x), var(--translate-y)) scale(var(--scale));
+  transform: scale(var(--scale));
 }
 
-.text-test {
+.projectDescriptionR {
   display: flex;
   flex-wrap: wrap;
   flex-flow: column;
   align-items: flex-start;
   width: 33.33rem;
-  vertical-align: bottom;
   /*transform: translate(0, 520px);*/
 }
 
@@ -330,13 +328,13 @@ footer {
 }
 
 @media only screen and (max-width: 1000px) {
-  #float {
+  .projectImageParentR {
     display: flex;
     margin: auto;
     left: 50%;
     transform: translate(-50%, -200px);
   }
-  .text-test {
+  .projectDescriptionR {
     min-width: 350px;
   }
 }
@@ -346,24 +344,24 @@ footer {
     margin-bottom: 3rem;
   }
 
-  .text-test {
+  .projectDescriptionR {
     display: none;
   }
 
-  .test {
+  .projectBackground {
     max-width: 60rem;
     margin-left: 16px;
     margin-right: 16px;
   }
 
-  #float {
-    transform: translate(0, -100px);
-    margin: auto;
+  .projectImageParentR {
+    transform: translate(0, -100px) !important;
+    margin: auto !important;
     padding-left: 32px;
     padding-right: 32px;
     right: 0px;
     left: 0px;
-    display: flex;
+    display: flex !important;
   }
 
   .parent p {
@@ -371,14 +369,6 @@ footer {
     margin-right: 16px;
     line-height: 2em;
     margin-bottom: 1.667rem;
-  }
-
-  .parent h1 {
-    margin-left: 16px;
-    margin-right: 16px;
-    font-size: 2.2rem;
-    font-weight: 600;
-    letter-spacing: 2px;
   }
 
   .projectSection span {
@@ -404,7 +394,7 @@ footer {
     margin-left: 0px;
   }
 
-  .projectSection h1 {
+  .projectDescriptionR h1 {
     margin-bottom: 16px;
     padding-left: 16px;
     font-size: 1.55rem;
@@ -430,6 +420,7 @@ footer {
   background-color: rgb(0, 0, 0);
   opacity: 0.1;
   overflow-x: hidden;
+  overflow-y: hidden;
   -webkit-transition: opacity 5s ease-in-out;
   transition: opacity 5s ease-in-out;
 }
