@@ -227,6 +227,7 @@ footer {
 }
 
 .test {
+  transition: all 200ms ease-out;
   display: inline-flex;
   max-width: 42rem;
 }
@@ -257,16 +258,25 @@ footer {
 
 
 #float {
-  transition: all 500ms ease-in-out;
+  transition: all 200ms ease-out;
   --translate-y: -100px;
   --scale: 1;
-  transform: translate(0, var(--translate-y)) scale(var(--scale));
+  --translate-x: 0px;
+  transform: translate(var(--translate-x), var(--translate-y)) scale(var(--scale));
   position: absolute;
   width: 100%;
   max-width: 43.33rem;
   right: 10rem;
   display: block;
   z-index: 10;
+}
+
+#floatImg {
+  transition: all 200ms ease-in-out;
+  --translate-y: 0px;
+  --scale: 1;
+  --translate-x: 0px;
+  transform: translate(var(--translate-x), var(--translate-y)) scale(var(--scale));
 }
 
 .text-test {

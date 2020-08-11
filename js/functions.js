@@ -235,6 +235,10 @@ function chSize(bla, blub) {
   }
 }
 
+function linkTo(url) {
+  window.location.href = url;
+}
+
 function showText(bla, blub) {
   if (bla > 0) {
     document.getElementById(blub).style.opacity = "1";

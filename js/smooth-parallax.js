@@ -190,7 +190,8 @@
         endX,
         endY,
         baseSizeOn,
-        baseSizeOnOptions = [ 'elementsize', 'containerSize' ];
+        baseSizeOnOptions = [ 'elementsize', 'containerSize' ],
+        onlyX;
 
     _movingElements = document.querySelectorAll('[smooth-parallax]');
 
@@ -202,6 +203,7 @@
       endX = parseFloat(_movingElements[i].getAttribute( 'end-position-x' )) || 0;
       endY = parseFloat(_movingElements[i].getAttribute( 'end-position-y' )) || 0;
       baseSizeOn = _movingElements[i].getAttribute( 'base-size' );
+      onlyX = _movingElements[i].getAttribute( 'only-x' ) || 0;
 
       if ( baseSizeOnOptions.indexOf( baseSizeOn ) == -1 ) {
         baseSizeOn = 'elementSize'; // Default value
@@ -227,7 +229,8 @@
           y: endY - startY,
         },
         target: {},
-        current: {}
+        current: {},
+        onlyX : onlyX
       };
 
       _positions.push( elementPosition );
@@ -289,7 +292,12 @@
       p.current.y = parseFloat( p.current.y.toFixed( _settings.decimalPrecision ) );
 
       // update element style
-      _movingElements[i].style.transform = 'translate3d(' + p.current.x + 'px, ' + p.current.y + 'px, 0)';
+      if (p.onlyX == 1) {
+        _movingElements[i].style.setProperty("--translate-x", p.current.x + 'px')
+      }
+      else {
+        _movingElements[i].style.transform = 'translate3d(' + p.current.x + 'px, ' + p.current.y + 'px, 0)';
+      }
     }
   };
 
