@@ -12,32 +12,32 @@
     scrollDuration = 700,
     scrolling = false;
 
+
+
   var descriptionLine = Array.from(document.querySelectorAll('h1 ~ svg'));
   let descriptionTitle = Array.from(document.querySelectorAll('h1'));
   var descriptionSubtitle = Array.from(document.querySelectorAll('svg ~ p'));
-  
-  
-
-
-   
-  if  (descriptionLine){
+     
+  if  (descriptionLine && descriptionTitle && descriptionSubtitle){
     window.addEventListener("scroll", function (event) {
-      if (window.scrollY >= (getDestinationDownExact(0)-100)) {
-        descriptionTitle[0].style.transitionDelay = "1s";
-        descriptionSubtitle[0].style.transitionDelay = "1s";
-        descriptionLine[0].style.transform = "scaleX(1)";
-        descriptionTitle[0].style.transform = "translate(0, 0) scaleY(1)";
-        descriptionSubtitle[0].style.transform = "translate(0, 0) scaleY(1)";
-      }
-      else if (window.scrollY < (getDestinationDownExact(0)-100)) {
-        descriptionTitle[0].style.transitionDelay = "0s";
-        descriptionSubtitle[0].style.transitionDelay = "0s";
-        descriptionLine[0].style.transform = "scaleX(0)";
-        descriptionTitle[0].style.transform = "translate(0, 16px) scaleY(0)";
-        descriptionSubtitle[0].style.transform = "translate(0, -16px) scaleY(0)";
+      var i;
+      for (i = 0; i < descriptionSubtitle.length; i++) {   
+        if (window.scrollY >= (getDestinationDownExact(i)-100)) {
+          descriptionTitle[i].style.transitionDelay = "1s";
+          descriptionSubtitle[i].style.transitionDelay = "1s";
+          descriptionLine[i].style.transform = "scaleX(1)";
+          descriptionTitle[i].style.transform = "translate(0, 0) scaleY(1)";
+          descriptionSubtitle[i].style.transform = "translate(0, 0) scaleY(1)";
+        }
+        else if (window.scrollY < (getDestinationDownExact(i)-100)) {
+          descriptionTitle[i].style.transitionDelay = "0s";
+          descriptionSubtitle[i].style.transitionDelay = "0s";
+          descriptionLine[i].style.transform = "scaleX(0)";
+          descriptionTitle[i].style.transform = "translate(0, 16px) scaleY(0)";
+          descriptionSubtitle[i].style.transform = "translate(0, -16px) scaleY(0)";
+        }
       }
     });
-    
   }
 
   if (backTop && downProject) {
@@ -163,9 +163,9 @@
     var destination = -(0.5 * window.innerHeight);
 
     if (number == 0) { destination += (top1 + (0.5 * height1)) }
-    else if (windowMiddle < (top2 + (0.5 * height2) - 10) && windowMiddle >= (top1 + (0.5 * height1) - 10)) { destination += (top2 + (0.5 * height2)) }
-    else if (windowMiddle < (top3 + (0.5 * height3) - 10) && windowMiddle >= (top2 + (0.5 * height2) - 10)) { destination += (top3 + (0.5 * height3)) }
-    else if (windowMiddle < (top4 + (0.5 * height4) - 10) && windowMiddle >= (top3 + (0.5 * height3) - 10)) { destination += (top4 + (0.5 * height4)) }
+    else if (number == 1) { destination += (top2 + (0.5 * height2)) }
+    else if (number == 2) { destination += (top3 + (0.5 * height3)) }
+    else if (number == 3) { destination += (top4 + (0.5 * height4)) }
     return destination;
   }
 
@@ -251,7 +251,8 @@ function closeNav() {
 }
 
 function chSize(value, number) {
-  let picture = document.getElementsByClassName("projectImage");
+  let picture = Array.from(document.querySelectorAll(".projectImage"));
+  console.log(picture);
   if (value > 0) {
     picture[number].style.setProperty("--scale", 1.03);
   } else {
@@ -277,6 +278,18 @@ window.addEventListener('load', (event) => {
   console.log('The page has fully loaded');
   var first = document.getElementById("one");
   first.style.opacity = "1";
+  var second = document.getElementById("two");
+  second.style.opacity = "1";
+  var third = document.getElementById("three");
+  third.style.opacity = "1";
+  var fourth = document.getElementById("four");
+  fourth.style.opacity = "1";
   var firstPic = document.getElementsByClassName("projectImageParentR")[0];
   firstPic.style.opacity = "1";
+  var thirdPic = document.getElementsByClassName("projectImageParentR")[1];
+  thirdPic.style.opacity = "1";
+  var secondPic = document.getElementsByClassName("projectImageParentL")[0];
+  secondPic.style.opacity = "1";
+  var fourthPic = document.getElementsByClassName("projectImageParentL")[1];
+  fourthPic.style.opacity = "1";
 });
