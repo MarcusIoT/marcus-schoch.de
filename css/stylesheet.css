@@ -258,7 +258,7 @@ footer {
   transform-origin: left;
 }
 
-.projectDescriptionR h1 {
+.projectDescriptionR .onlyBig {
   font-family: 'Bebas Neue', cursive;
   font-size: 1.889rem!important;
   color: #2E4F79 !important;
@@ -270,7 +270,7 @@ footer {
   transform-origin: bottom;
 }
 
-.projectDescriptionL h1 {
+.projectDescriptionL .onlyBig {
   font-family: 'Bebas Neue', cursive;
   font-size: 1.889rem!important;
   color: #2E4F79 !important;
@@ -301,7 +301,8 @@ footer {
   position: absolute;
   width: 100%;
   max-width: 43.33rem;
-  right: 10rem;
+  --right: 10rem;
+  right: var(--right);
   display: block;
   z-index: 10;
   opacity: 0;
@@ -316,7 +317,8 @@ footer {
   position: absolute;
   width: 100%;
   max-width: 43.33rem;
-  left: 10rem;
+  --left: 10rem;
+  left: var(--left);
   display: block;
   z-index: 10;
   opacity: 0;
@@ -386,6 +388,10 @@ footer {
   padding-left: 0px;
 }
 
+.onlyMobile {
+  display: none;
+}
+
 @media only screen and (max-width: 1000px) {
   .projectImageParentR {
     display: flex;
@@ -399,8 +405,32 @@ footer {
 }
 
 @media only screen and (max-width: 767px) {
+
+  .parentProjects {
+    margin-bottom: 10rem !important;
+  }
+  
+  .parentProjectsL {
+    margin-bottom: 10rem !important;
+  }
+
   .b65 {
     margin-bottom: 3rem;
+  }
+
+  .onlyMobile {
+  display: initial;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2.1rem!important;
+  color: #FFFFFA !important;
+  letter-spacing: 0.3rem;
+  z-index: 40;
+  bottom: 30px;
+  opacity: 0.8;
+  transform: translate(0, 0) scale(1);
   }
 
   .projectDescriptionR {
@@ -418,7 +448,8 @@ footer {
   }
 
   .projectImageParentR {
-    transform: translate(0, -100px) !important;
+    --tranfsormYSmall: 0;
+    transform: translate(0, var(--tranfsormYSmall)) !important;
     margin: auto !important;
     padding-left: 32px;
     padding-right: 32px;
@@ -428,7 +459,8 @@ footer {
   }
 
   .projectImageParentL {
-    transform: translate(0, -100px) !important;
+    --tranfsormYSmall: 0;
+    transform: translate(0, var(--tranfsormYSmall)) !important;
     margin: auto !important;
     padding-left: 32px;
     padding-right: 32px;
@@ -454,6 +486,11 @@ footer {
 
   header h2 {
     max-width: 20rem;
+    margin-top: 10vh;
+  }
+
+  header {
+    margin-bottom: 30vh;
   }
 
 }
@@ -471,14 +508,14 @@ footer {
     margin-left: 0px;
   }
 
-  .projectDescriptionR h1 {
+  .projectDescriptionR .onlyBig {
     margin-bottom: 16px;
     padding-left: 16px;
     font-size: 1.55rem;
     font-weight: 300;
   }
 
-  .projectDescriptionL h1 {
+  .projectDescriptionL .onlyBig {
     margin-bottom: 16px;
     padding-right: 16px;
     font-size: 1.55rem;
@@ -1010,20 +1047,24 @@ footer {
   width: 100%;
   max-width: 14.5rem;
   margin-top: 1.667rem !important;
-  margin-bottom: 1.667rem !important;
+  margin-bottom: 1rem !important;
   margin:0 auto;
   display: block;
   padding-right: 16px;
   padding-left: 16px;
 }
 
-.freeTime p, .freeTime h3{
+.freeTime h1{
   max-width: 14.5rem;
   margin: auto;
-  margin-top: 1.667rem;
   margin-bottom: 1.667rem;
   padding-right: 16px;
   padding-left: 16px;
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.889rem!important;
+  color: #2E4F79 !important;
+  letter-spacing: 0.135rem;
 }
 
 .documentation p {

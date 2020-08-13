@@ -15,7 +15,7 @@
 
 
   var descriptionLine = Array.from(document.querySelectorAll('h1 ~ svg'));
-  let descriptionTitle = Array.from(document.querySelectorAll('h1'));
+  let descriptionTitle = Array.from(document.querySelectorAll('.onlyBig'));
   var descriptionSubtitle = Array.from(document.querySelectorAll('svg ~ p'));
      
   if  (descriptionLine && descriptionTitle && descriptionSubtitle){
