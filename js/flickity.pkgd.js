@@ -1498,7 +1498,7 @@ proto._getCanCellFit = function() {
     var groupCells = 1
   }
   else if (window.innerWidth >= 768) {
-    var groupCells = 4
+    var groupCells = this.options.groupCells;
   }
   //------------------CHANGED--------------------
 

@@ -1165,17 +1165,26 @@ footer {
   .carousel-cell {
     width: 16.665rem;
   }
+  .carousel-cell1 {
+    width: 22rem;
+  }
 }
 
 @media only screen and (min-width: 768px) {
   .carousel-cell {
     width: 12.733rem;
   }
+  .carousel-cell1 {
+    width: 25.466rem;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
   .carousel-cell {
     width: 16.665rem;
+  }
+  .carousel-cell1 {
+    width: 33.33rem;
   }
 }
 
