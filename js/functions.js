@@ -22,14 +22,14 @@
     window.addEventListener("scroll", function (event) {
       var i;
       for (i = 0; i < descriptionSubtitle.length; i++) {   
-        if (window.scrollY >= (getDestinationDownExact(i)-100)) {
+        if (window.scrollY >= (getDestinationDownExact(i)-150)) {
           descriptionTitle[i].style.transitionDelay = "1s";
           descriptionSubtitle[i].style.transitionDelay = "1s";
           descriptionLine[i].style.transform = "scaleX(1)";
           descriptionTitle[i].style.transform = "translate(0, 0) scaleY(1)";
           descriptionSubtitle[i].style.transform = "translate(0, 0) scaleY(1)";
         }
-        else if (window.scrollY < (getDestinationDownExact(i)-100)) {
+        else if (window.scrollY < (getDestinationDownExact(i)-150)) {
           descriptionTitle[i].style.transitionDelay = "0s";
           descriptionSubtitle[i].style.transitionDelay = "0s";
           descriptionLine[i].style.transform = "scaleX(0)";
@@ -39,6 +39,7 @@
       }
     });
   }
+  
 
   if (backTop && downProject) {
     window.addEventListener("scroll", function (event) {
@@ -277,6 +278,8 @@ function showText(bla, blub) {
 window.addEventListener('load', (event) => {
   console.log('The page has fully loaded');
   var first = document.getElementById("one");
+  if (first) {
+
   first.style.opacity = "1";
   var second = document.getElementById("two");
   second.style.opacity = "1";
@@ -292,4 +295,48 @@ window.addEventListener('load', (event) => {
   secondPic.style.opacity = "1";
   var fourthPic = document.getElementsByClassName("projectImageParentL")[1];
   fourthPic.style.opacity = "1";
+  }
+
+  handleParallax();
 });
+
+
+
+window.addEventListener('resize', (event) => {
+    handleParallax();
+});
+
+
+function handleParallax () {
+
+  var names = document.getElementById("names");
+  var projectBackground = document.getElementsByClassName("projectBackground");
+
+  if (names) {
+    if (window.innerWidth < 768 && names.hasAttribute("smooth-parallax") == 1){
+      names.removeAttribute("smooth-parallax");
+      names.style.transform = "translate3d(0px, 0px, 0px)";
+      SmoothParallax.init();
+    }
+    else if (window.innerWidth >= 768 && names.hasAttribute("smooth-parallax") == 0) {
+      names.setAttribute("smooth-parallax", "");
+      SmoothParallax.init();
+    }
+  }
+
+  else if (projectBackground) {
+    if (window.innerWidth < 768 && projectBackground.length > 0){
+      for (i = 0; i < projectBackground.length; i++) {
+        projectBackground[i].setAttribute("start-position-y", "0.2");
+      }
+      SmoothParallax.init();
+    }
+    else if (window.innerWidth >= 768 && projectBackground.length > 0) {
+      for (i = 0; i < projectBackground.length; i++) {
+        projectBackground[i].setAttribute("start-position-y", "0.5");
+      }
+      SmoothParallax.init();
+    }
+  }
+
+}

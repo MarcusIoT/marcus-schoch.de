@@ -13,6 +13,15 @@ html {
   html {
     font-size: 15px;
   }
+
+  .w3-bar .w3-bar-item {
+    padding: 0.444rem 16px !important;
+  }
+
+  .w3-bar a.w3-hide-small {
+    padding-top: 0.89rem !important;
+  }
+
 }
 
 /*---------------            ---------------*/
@@ -67,17 +76,13 @@ body {
   color: #282828;
 }
 
-.w3-button:hover {
-  color: #771B0C ;
+.w3-bar-item:hover {
+  color: #1e385a !important;
   background: none;
 }
 
-.w3-button:hover path {
-  fill: #771B0C;
-}
-
 .w3-button svg {
-  margin-top: 3px;
+  margin-top: 2px;
 }
 
 .language {
@@ -240,8 +245,9 @@ footer {
 
 .projectBackground {
   transition: all 200ms ease-out;
-  display: inline-flex;
+  display: flex;
   max-width: 42rem;
+  max-height: 42rem;
 }
 
 .projectDescriptionR svg {
@@ -289,6 +295,10 @@ footer {
   transition-timing-function: ease-in-out;
   transform: translate(0, -16px) scaleY(0);
   transform-origin: top;
+}
+
+.projectDescriptionL .subtitle {
+  text-align: right;
 }
 
 
@@ -402,6 +412,25 @@ footer {
   .projectDescriptionR {
     min-width: 350px;
   }
+
+  .projectImageParentL {
+    display: flex;
+    margin: auto;
+    left: 50%;
+    transform: translate(-50%, -200px);
+  }
+  .projectDescriptionL {
+    min-width: 350px;
+  }
+
+  .projectImage {
+    margin: auto;
+    max-width: 500px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -467,6 +496,10 @@ footer {
     right: 0px;
     left: 0px;
     display: flex !important;
+  }
+
+  .projectImage {
+    width: 100%;
   }
 
   .parent p {
@@ -547,7 +580,7 @@ footer {
 
 .overlay.myNav--show {
   display: block;
-  opacity: 0.925;
+  opacity: 0.95;
 }
 
 
@@ -555,7 +588,7 @@ footer {
   position: relative;
   width: 100%;
   text-align: right;
-  margin-top: 90px;
+  margin-top: 120px;
 }
 
 .overlay-content a {
@@ -665,7 +698,7 @@ footer {
 }
 
 .socialMediaIcons a {
-  color: #333;
+  color: #555 !important;
   font-size: 1.944rem;
   margin-right: 0.833rem;
   transition: all .3s;
@@ -673,12 +706,12 @@ footer {
 }
 
 .socialMediaIcons li a{
-  color:  rgb(0, 0, 0);
+  color:  #2E4F79;
   opacity: 0.7;
 }
 
 .socialMediaIcons li a:hover{
-  color: rgb(0, 0, 0);
+  color:#2E4F79 !important;
   opacity: 1;
 }
 
@@ -752,6 +785,25 @@ footer {
 
 /*--------------- Project Sites ---------------*/
 
+.st0 {
+  fill: none;
+  stroke: #8E8E8E;
+  stroke-linecap: butt;
+  stroke-linejoin: butt;
+  stroke-width: 0.5;
+  stroke-miterlimit: 5;
+}
+
+.st1 {
+  fill:none;
+  stroke:#282811;
+  stroke-miterlimit:10;
+}
+
+.st2 {
+  stroke:#FFFFFF;
+  stroke-miterlimit:10;
+}
 
 .col-sm-12{
   overflow:hidden;
@@ -857,6 +909,10 @@ footer {
 
   .names {
     margin-top: 3rem;
+    padding-top: 16px;
+    padding-bottom: 6px;
+    padding-left: 16px;
+    background-color: #f7f5f5;
   }
 
   .leftArrow svg {
@@ -903,6 +959,11 @@ footer {
 
   .names{
     margin-top: 3rem;
+    padding-top: 16px;
+    padding-bottom: 6px;
+    margin-left: 16px;
+    margin-right: 16px;
+    background-color: #f7f5f5;
   }
 
   .contentProjects p, .contentProjects h3{
@@ -915,11 +976,11 @@ footer {
   }
 
   .leftArrow svg {
-    margin-left: 0px;
+    margin-left: 5px;
   }
 
   .rightArrow svg {
-    margin-right: 0px;
+    margin-right: 5px;
   }
 
   .projectNavigation svg {
@@ -933,6 +994,11 @@ footer {
 
   .p-hide {
     display: none;
+  }
+
+  .a-hide p {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
   }
 
   .freeTime {
@@ -955,6 +1021,11 @@ footer {
   padding-left: 16px;
 }
 
+.smallPic {
+  max-width: 32rem !important;
+  margin-top: 0.5rem !important;
+}
+
 .twoPic {
   max-width: 66.66rem;
   margin:0 auto;
@@ -967,9 +1038,18 @@ footer {
   margin-bottom: 1.667rem;
 }
 
+.OtherHeading{
+  max-width: 30rem;
+  margin: auto;
+  margin-top: 1.667rem;
+  font-size: 2.25rem;
+  color: #2E4F79 !important;
+  letter-spacing: 0.241rem;
+}
+
 .parallax { 
   /* The image used */
-  background-image: url("../img/Aufstellung.jpg");
+  background-image: url("../img/03_senseChess/02.jpg");
 
   /* Set a specific height */
   height: 500px; 
@@ -1025,9 +1105,9 @@ footer {
 }
 
 .shadow img {
-  -webkit-box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1);
   padding-left: 0%;
   padding-right: 16px;
 }
@@ -1072,3 +1152,32 @@ footer {
   padding-right: 16px;
   padding-left: 16px;
 }
+
+.sources {
+  font-size: 0.8rem !important;
+  line-height: 1.4rem !important;
+  color: rgb(120, 120, 120) !important;
+  margin-top: 0rem !important;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .carousel-cell {
+    width: 16.665rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .carousel-cell {
+    width: 12.733rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .carousel-cell {
+    width: 16.665rem;
+  }
+}
+
+
+
