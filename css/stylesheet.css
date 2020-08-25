@@ -221,6 +221,7 @@ footer {
 
 .parentProjects {
   margin: auto;
+  -webkit-display: flex;
   display: flex;
   position: relative;
   max-width: 84rem;
@@ -231,6 +232,7 @@ footer {
 
 .parentProjectsL {
   margin: auto;
+  -webkit-display: flex;
   display: flex;
   position: relative;
   max-width: 84rem;
@@ -245,9 +247,13 @@ footer {
 
 .projectBackground {
   transition: all 200ms ease-out;
-  display: flex;
   max-width: 42rem;
   max-height: 42rem;
+  height: 100% !important;
+}
+
+.projectBackground img {
+  height: auto !important;
 }
 
 .projectDescriptionR svg {
@@ -404,7 +410,7 @@ footer {
 
 @media only screen and (max-width: 1000px) {
   .projectImageParentR {
-    display: flex;
+    /* display: flex; */
     margin: auto;
     left: 50%;
     transform: translate(-50%, -200px);
@@ -414,7 +420,7 @@ footer {
   }
 
   .projectImageParentL {
-    display: flex;
+    /* display: flex; */
     margin: auto;
     left: 50%;
     transform: translate(-50%, -200px);
@@ -440,6 +446,10 @@ footer {
   }
   
   .parentProjectsL {
+    margin-bottom: 10rem !important;
+  }
+
+  .parentProjectsR {
     margin-bottom: 10rem !important;
   }
 
@@ -484,7 +494,7 @@ footer {
     padding-right: 32px;
     right: 0px;
     left: 0px;
-    display: flex !important;
+    /* display: flex !important; */
   }
 
   .projectImageParentL {
@@ -495,7 +505,7 @@ footer {
     padding-right: 32px;
     right: 0px;
     left: 0px;
-    display: flex !important;
+    /* display: flex !important; */
   }
 
   .projectImage {
@@ -519,6 +529,10 @@ footer {
 
   header h2 {
     max-width: 20rem;
+    margin-top: 10vh;
+  }
+
+  .about h2 {
     margin-top: 10vh;
   }
 
@@ -587,7 +601,7 @@ footer {
 .overlay-content {
   position: relative;
   width: 100%;
-  text-align: right;
+  text-align: center;
   margin-top: 120px;
 }
 
@@ -596,9 +610,9 @@ footer {
   font-weight: 400;
   letter-spacing: 0.222rem;
   text-transform: uppercase;
-  margin-right: 16px;
+  padding-left: 8px;
   margin-bottom: 16px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #e0e0e0 !important;
   display: block;
   transition: 0.3s;
@@ -967,6 +981,10 @@ footer {
   }
 
   .contentProjects p, .contentProjects h3{
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+  .OtherHeading {
     padding-right: 16px;
     padding-left: 16px;
   }
