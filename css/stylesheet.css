@@ -208,6 +208,7 @@ footer {
     margin-left: 0.889rem;
     margin-bottom: 0.444rem;
   }
+  
 
   .imprint {
     display: block;
@@ -695,8 +696,12 @@ footer {
   padding-right: 0.887rem;
 }
 
+.aboutP{
+  margin-top: 6.667rem !important;
+}
+
 .about p{
-  margin-top: 6.667rem;
+  margin-top: 2rem;
 }
 
 .socialMediaIcons {
@@ -714,7 +719,7 @@ footer {
 .socialMediaIcons a {
   color: #555 !important;
   font-size: 1.944rem;
-  margin-right: 0.833rem;
+  margin-right: 0.887rem;
   transition: all .3s;
   -webkit-transition: all .3s;
 }
