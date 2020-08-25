@@ -22,14 +22,14 @@
     window.addEventListener("scroll", function (event) {
       var i;
       for (i = 0; i < descriptionSubtitle.length; i++) {   
-        if (window.scrollY >= (getDestinationDownExact(i)-150)) {
+        if (window.scrollY >= (getDestinationDownExact(i)-(window.innerWidth/7))) {
           descriptionTitle[i].style.transitionDelay = "1s";
           descriptionSubtitle[i].style.transitionDelay = "1s";
           descriptionLine[i].style.transform = "scaleX(1)";
           descriptionTitle[i].style.transform = "translate(0, 0) scaleY(1)";
           descriptionSubtitle[i].style.transform = "translate(0, 0) scaleY(1)";
         }
-        else if (window.scrollY < (getDestinationDownExact(i)-150)) {
+        else if (window.scrollY < (getDestinationDownExact(i)-(window.innerWidth/7))) {
           descriptionTitle[i].style.transitionDelay = "0s";
           descriptionSubtitle[i].style.transitionDelay = "0s";
           descriptionLine[i].style.transform = "scaleX(0)";
@@ -253,7 +253,6 @@ function closeNav() {
 
 function chSize(value, number) {
   let picture = Array.from(document.querySelectorAll(".projectImage"));
-  console.log(picture);
   if (value > 0) {
     picture[number].style.setProperty("--scale", 1.03);
   } else {
@@ -268,7 +267,6 @@ function linkTo(url) {
 function showText(bla, blub) {
   if (bla > 0) {
     document.getElementById(blub).style.opacity = "1";
-    console.log("jep");
   } else {
     document.getElementById(blub).style.opacity = "0";
   }

@@ -311,7 +311,7 @@ footer {
 
 .projectImageParentR {
   transition: all 200ms ease-out;
-  --translate-y: -100px;
+  --translate-y: -5.556rem;
   --scale: 1;
   --translate-x: 0px;
   transform: translate(var(--translate-x), var(--translate-y)) scale(var(--scale));
@@ -327,7 +327,7 @@ footer {
 
 .projectImageParentL {
   transition: all 200ms ease-out;
-  --translate-y: -100px;
+  --translate-y: -5.556rem;
   --scale: 1;
   --translate-x: 0px;
   transform: translate(var(--translate-x), var(--translate-y)) scale(var(--scale));
