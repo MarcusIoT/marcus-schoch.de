@@ -1111,7 +1111,7 @@ footer {
   overflow: hidden;
 }
 
-.newContainer {
+.videoContainer {
   max-width: 66.66rem;
   padding-right: 0.889rem;
   padding-left: 0.889rem;
@@ -1120,6 +1120,10 @@ footer {
   margin-top: 1.667rem;
   margin-bottom: 3rem;
   overflow: hidden;
+}
+
+.smallGif {
+  max-width: 20rem !important;
 }
 
 .poster img {
@@ -1213,3 +1217,138 @@ footer {
 
 
 
+
+.section-info {
+  padding-inline-start: unset;
+  margin-left: 0.889rem;
+  margin-right: 0.889rem;
+  max-width: 27.778rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.section-info p, h3{
+  margin: initial;
+}
+
+
+
+.pv-recommendation-entity:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+.pv-recommendation-entity {
+  margin-right: 0;
+  display: flex;
+  border-top: 1px solid #e6e9ec;
+  padding: 16px 0;
+}
+
+/* image settings */
+.pv-recommendation-entity img {
+margin: unset;
+padding: unset;
+border-radius: 50%
+
+
+}
+
+.pv-recommendation-entity__header {
+  width: 40%;
+}
+
+.pv-recommendation-entity__highlights {
+  width: 60%;
+  padding-right: 16px;
+}
+
+.pv-profile-wrapper a:visited {
+  color: #fff;
+}
+.pv-profile-wrapper a {
+  text-decoration: none;
+}
+
+.pv-recommendation-entity__member {
+  display: block;
+  overflow: auto;
+  text-decoration: none;
+}
+
+a.pv-recommendation-entity__member {
+    color: #fff;
+    text-decoration: none;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+    border-bottom: 0px #fff;
+}
+
+/* name of recommending */
+.t-16 {
+  padding-top: 15px;
+  font-size: 0.92rem;
+  line-height: 1.33333 !important;
+}
+
+/* title of recommending */
+.t-14 {
+  font-size: 0.78rem;
+  line-height: 1.42857 !important;
+}
+
+/* date and relationship */
+.t-12 {
+  padding-top: 5px;
+  font-size: 0.70rem;
+  line-height: 1.33333 !important;
+}
+
+/* more text styles */
+.t-black {
+  color: rgba(0,0,0,.9) !important;
+}
+.t-bold {
+  font-weight: 600 !important;
+}
+.t-normal {
+  font-weight: 400 !important;
+}
+.t-black--light {
+  color: rgba(0,0,0,.6) !important;
+}
+
+/* sizing of recommendation text */
+blockquote {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-size: 0.92rem;
+  font-style: italic;
+  line-height: 1.6rem;
+  color: rgba(0,0,0,.75);
+  padding-top: 0px;
+  padding-right: 20px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  height: 100%;
+  border-left: none;
+  border-right: 2px solid #eee
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+
+@media only screen and (max-width: 767px) {
+
+  .pv-recommendation-entity__header {
+    width: 40%;
+  }
+  
+  .pv-recommendation-entity__highlights {
+    width: 60%;
+  }
+
+}
